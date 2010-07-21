@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+</head>
+<body>
+    <input type="text" id="s1" />
+    +
+    <input type="text" id="s2" />
+    <input type="button" id="b" value=" = " onclick="Topla();"/>
+    <input type="text" id="s3" />
+    
+    <script type="text/javascript">
+        function Topla() {
+            var s1 = document.getElementById("s1");
+            var s2 = document.getElementById("s2");
+            var s3 = document.getElementById("s3");
+
+            //var s1d = parseInt(s1.value);
+            var s1d = parseFloat(s1.value);
+            //var s2d = parseInt(s2.value);
+            var s2d = parseFloat(s2.value);
+
+            var s3d = s1d + s2d;
+
+            s3.value = s3d;
+
+            document.getElementById("s3").value =
+                parseFloat(document.getElementById("s1").value) +
+                parseFloat(document.getElementById("s2").value);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var d = new Date();
+
+        //document.writeln(d);
+        document.writeln(d.getDate() + "/" + (d.getMonth() + 1) + "." + d.getFullYear() + " ");
+        //document.writeln(d.getDay());
+        if (d.getDay() == 0) {
+            document.writeln("Pazar");
+        }
+        else if (d.getDay() == 1) {
+            document.writeln("Pazartesi");
+        }
+        else if (d.getDay() == 2) {
+            document.writeln("Salı");
+        }
+        else if (d.getDay() == 3) {
+            document.writeln("Çarşamba");
+        }
+        else if (d.getDay() == 4) {
+            document.writeln("Perşembe");
+        }
+        else if (d.getDay() == 5) {
+            document.writeln("Cuma");
+        }
+        else if (d.getDay() == 6) {
+            document.writeln("Cumartesi");
+        }
+
+        var d2 = new Date(1978, 5, 19, 9, 30);
+        //        d2.setDate(19);
+        //        d2.setMonth(5);
+        //        d2.setFullYear(1978);
+        document.writeln(d2);
+    </script>
+
+</body>
+</html>

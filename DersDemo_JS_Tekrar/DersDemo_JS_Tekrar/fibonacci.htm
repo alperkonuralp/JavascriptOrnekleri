@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // 1 1 2 3 5 8 13 21 34 55 89
+        var sayi = prompt("Lütfen en üst limiti giriniz: ", 10000);
+        sayi = parseInt(sayi);
+        if (!isNaN(sayi)) {
+            var a = 0, b = 1;
+            while (b < sayi) {
+                document.writeln(b + " ");
+                var c = a + b;
+                a = b;
+                b = c;
+            }
+            //for (
+            //    var a = 0, b = 1, c = 0; 
+            //    b < sayi; 
+            //    c = a + b, a = b, b = c) { document.writeln(b); }
+        }
+
+    </script>
+
+</body>
+</html>

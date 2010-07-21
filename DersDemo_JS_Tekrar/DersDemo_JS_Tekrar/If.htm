@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var yas = parseInt(prompt("Yaşınızı Giriniz: "));
+
+        if (!isNaN(yas)) {
+
+            if (yas < 5) {
+                alert("Bebek");
+            }
+            else {
+                if (yas < 16) {
+                    alert("Çocuk");
+                }
+                else {
+                    if (yas < 30) {
+                        alert("Genç");
+                    }
+                    else {
+                        if (yas < 45) {
+                            alert("Orta Yaşlı");
+                        }
+                        else {
+                            alert("Yaşlı");
+                        }
+                    }
+                }
+            }
+
+
+            if (yas < 5) {
+                alert("Bebek");
+            }
+            if (yas>= 5 && yas < 16) {
+                alert("Çocuk");
+            }
+            if (yas >= 16 && yas < 30) {
+                alert("Genç");
+            }
+            if (yas >= 30 && yas < 45) {
+                alert("Orta Yaşlı");
+            }
+            if (yas >= 45) {
+                alert("Yaşlı");
+            }
+
+        }
+        else {
+            alert("Lütfen geçerli bir değer giriniz.");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var os = parseInt(prompt("Sınıftaki Öğrenci Sayısı:", 3));
+        if (!isNaN(os)) {
+            var toplam = 0;
+            for (var i = 0; i < os; i++) {
+                var oy = parseInt(
+                    prompt((i + 1) + ". Öğrencinin Yaşı: ", 20));
+                toplam += oy;
+                document.writeln(
+                    "<div>" + (i + 1) + ". Öğrencinin Yaşı : " + 
+                    oy + "</div>");
+            }
+            document.write("<hr/>");
+            document.writeln(
+                "<div>Ortalama Yaş : " + (toplam / os) + "</div>");
+        }
+    
+    </script>
+
+</body>
+</html>
