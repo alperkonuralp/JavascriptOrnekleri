@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var toplam = 0;
+        var sayi = 0;
+
+        while (true) {
+            sayi++;
+            var yas = parseInt(prompt(sayi + ". Öğrencinin Yaşı : "));
+            toplam += yas;
+            var devam = confirm("Başka öğrenci varsa Tamam, " +
+                                "Yoksa İptal tuşuna basınız.");
+            if (!devam) {
+                break;
+            }
+        }
+
+        document.write("Sınıfta " + sayi + " kişi var.<br/>");
+        document.write("Ortalama Yaş : " + (toplam / sayi));
+    </script>
+
+</body>
+</html>
