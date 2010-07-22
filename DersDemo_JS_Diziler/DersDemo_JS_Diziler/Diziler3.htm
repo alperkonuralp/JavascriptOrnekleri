@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var fiyatlar = [8800, 22000, 50000, 999999999];
+        var oranlar = [0.15, 0.20, 0.27, 0.35];
+
+        var gelir = parseInt(prompt("Yıllık Geliriniz : "));
+        var vergi = 0;
+
+        for (var i = 0; i < fiyatlar.length; i++) {
+            if (gelir < fiyatlar[i]) {
+                vergi += (gelir - (i == 0 ? 0 : fiyatlar[i-1])) * oranlar[i];
+                break;
+            }
+            else {
+
+                if (i == 0) {
+                    vergi += fiyatlar[i] * oranlar[i];
+                }
+                else {
+                    vergi += (fiyatlar[i] - fiyatlar[i - 1]) * oranlar[i];
+                }
+            }
+        }
+
+        document.write(gelir + " tl gelir için vergi = " + vergi);
+    </script>
+
+</body>
+</html>

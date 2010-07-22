@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var a = parseInt(prompt("a değerini giriniz: ", 1));
+        var b = parseInt(prompt("b değerini giriniz: ", 4));
+        var c = parseInt(prompt("c değerini giriniz: ", 4));
+
+        var d = b * b - 4 * a * c;
+
+        if (d < 0) {
+            document.write(a + "x<sup>2</sup> + " +
+                    b + "x + " + c + " = 0  denkleminin " +
+                "reel bir kökü yoktur.");
+        }
+        else {
+            if (d == 0) {
+                document.write(a + "x<sup>2</sup> + " +
+                    b + "x + " + c + " = 0 " +
+                    "denkleminin " +
+                    "eşit 2 kökü vardır :" +
+                        ((-1 * b) / (2 * a))
+                    );
+            }
+            else {
+                d = Math.sqrt(d);
+                var x1 = (-1 * b + d) / (2 * a);
+                var x2 = (-1 * b - d) / (2 * a);
+                
+                document.write(a + "x<sup>2</sup> + " +
+                    b + "x + " + c + " = 0 " +
+                    "denkleminin " +
+                    " 1. kökü : " + x1 + 
+                    " 2. kökü : " + x2 
+                    );
+            }
+        }
+    
+    </script>
+
+</body>
+</html>

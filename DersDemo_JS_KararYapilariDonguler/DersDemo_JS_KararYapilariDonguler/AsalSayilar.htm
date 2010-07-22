@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    2<br />
+
+    <script type="text/javascript">
+        for (var i = 3; i < 100; i += 2) {
+            var asal = true;
+            for (var j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    asal = false;
+                    break;
+                }
+            }
+            if (asal) {
+                document.write(i + "<br/>");
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
