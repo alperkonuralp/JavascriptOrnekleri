@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+
+        <script type="text/javascript">
+            var ogrenciler = new Array();
+            while (true) {
+                var ob = new Array();
+                ob[0] = prompt("Adını ve Soyadını giriniz: ");
+                ob[1] = prompt("Çalıştığı firmayı giriniz: ");
+                ob[2] = prompt("Cep telefonunu giriniz: ");
+                ob[3] = prompt("E-Posta adresini giriniz: ");
+                ob[4] = confirm("21.07.2010'da derse geldi mi?");
+                ob[5] = confirm("22.07.2010'da derse geldi mi?");
+                ob[6] = confirm("23.07.2010'da derse geldi mi?");
+
+                ogrenciler[ogrenciler.length] = ob;
+
+                var conf = confirm("Devam için OK");
+                if (!conf) break;
+
+            }
+
+
+            for (var i in ogrenciler) {
+                document.write("<tr>");
+                for (var j in ogrenciler[i]) {
+                    document.write("<td>");
+                    document.write(ogrenciler[i][j]);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table>
+
+        <script type="text/javascript">
+            var veriler = new Array();
+
+            veriler[0] = new Array();
+            veriler[0]["StokAdi"] = "Kalem";
+            veriler[0]["StokKodu"] = "K001";
+            veriler[0]["BirimFiyati"] = 0.75;
+            veriler[0]["StokAdedi"] = 100;
+
+            veriler[1] = new Array();
+            veriler[1]["StokAdi"] = "Silgi";
+            veriler[1]["StokKodu"] = "S001";
+            veriler[1]["BirimFiyati"] = 0.25;
+            veriler[1]["StokAdedi"] = 200;
+
+            veriler[2] = new Array();
+            veriler[2]["StokAdi"] = "Kağıt";
+            veriler[2]["StokKodu"] = "Ka001";
+            veriler[2]["BirimFiyati"] = 0.05;
+            veriler[2]["StokAdedi"] = 5000;
+
+
+            for (var i in veriler) {
+                document.write("<tr>");
+                for (var j in veriler[i]) {
+                    document.write("<td>");
+                    document.write(veriler[i][j]);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+        </script>
+
+    </table>
+</body>
+</html>

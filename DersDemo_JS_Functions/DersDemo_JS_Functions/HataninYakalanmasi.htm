@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        function GetInt(msg, defstr) {
+            while (true) {
+                var a = parseInt(prompt(msg, defstr));
+                if (!isNaN(a)) {
+                    return a;
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        var yas = GetInt("Lütfen yaşınızı giriniz.", 10);
+        document.write("10 yıl sonraki yaşınız : " + (yas + 10));
+    
+    </script>
+
+</body>
+</html>

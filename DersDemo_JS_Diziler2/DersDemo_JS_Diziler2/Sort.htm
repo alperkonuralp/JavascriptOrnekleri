@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function sortNumber(a, b) {
+            return a - b;
+        }
+
+    
+        var a = [15, 2, 3, 78, 14, 1, 58];
+
+        for (var i in a) {
+            document.write("<div>" + i + " => " +
+                a[i] + "</div>");
+        }
+        document.write("<br/>");
+        var b = a.sort(sortNumber);
+        for (var i in b) {
+            document.write("<div>" + i + " => " +
+                b[i] + "</div>");
+        }
+    </script>
+
+</body>
+</html>

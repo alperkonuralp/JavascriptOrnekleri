@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var a = [15, 24, 1, 42, 22, 7, 98, 14, 32];
+        document.write(a);
+        document.write("<br/>");
+        document.write(a.join());
+        document.write("<br/>");
+        document.write(a.join(", "));
+        document.write("<br/>");
+        document.write(a.join(" "));
+        document.write("<br/>");
+        document.write(a.join(". "));
+        document.write("<br/>");
+        document.write(a.join("|"));
+        document.write("<br/>");
+
+        document.write("<table><tr><td>");
+        document.write(a.join("</td><td>"));
+        document.write("</td></tr></table>");
+        
+        document.write("<div>");
+        document.write(a.join("</div><div>"));
+        document.write("</div>");
+
+        document.write("<span style='color: red'>");
+        document.write(a.join("</span> , <span style='color: red'>"));
+        document.write("</span>");
+
+
+
+        var b = [
+            "http://www.w3schools.com/images/vectorstock_155.gif",
+            "http://www.w3schools.com/images/tryitimg.gif",
+            "http://www.w3schools.com/images/tabletop_gradient.gif",
+            "http://www.w3schools.com/banners/softbaugh2.jpg",
+            "http://www.w3schools.com/images/w3schoolscom_gray.gif"];
+
+        document.write("<div>");
+        for (var i in b) {
+            document.write(
+                '<img src="' + b[i] + '" alt="' + b[i] + '"/>');
+        }
+        document.write("</div>");
+
+        document.write("<div><img src=\"" +
+            b.join('" /><img src="')
+        +"\"/></div>");
+    </script>
+
+</body>
+</html>

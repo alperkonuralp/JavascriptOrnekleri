@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var a = "25|14|78|9|14|11|1";
+        var b = a.split("|");
+        document.write(b);
+
+        var c = '<DIV><IMG src="http://www.w3schools.com/images/vectorstock_155.gif"><IMG src="http://www.w3schools.com/images/tryitimg.gif"><IMG src="http://www.w3schools.com/images/tabletop_gradient.gif"><IMG src="http://www.w3schools.com/banners/softbaugh2.jpg"><IMG src="http://www.w3schools.com/images/w3schoolscom_gray.gif"></DIV>';
+        c = c.replace('<DIV><IMG src="', '');
+        c = c.replace('"></DIV>', '');
+        var d = c.split('"><IMG src="');
+        document.write("<br/>");
+        document.write(d);
+
+        var e = "Bu bir dEnemedir.";
+        var f = e.replace("Bu", "O");
+        f = f.replace(/e/g, "<span style='color:red'>E</span>");
+        document.write("<br/>" + e + "<br/>" + f)
+    </script>
+
+</body>
+</html>

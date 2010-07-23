@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var ogrenciler = new Array();
+        var i = 1;
+        while (true) {
+            var oa = prompt((i++) + ". Öğrencinin Adı: ");
+            ogrenciler[ogrenciler.length] = oa;
+
+            var conf = confirm("Devam etmek için OK.");
+            if (!conf) {
+                break;
+            }
+        }
+
+        for (var i = 0; i < ogrenciler.length; i++) {
+            document.write("<div>" + ogrenciler[i] + "</div>");
+        }
+    </script>
+
+</body>
+</html>
