@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function Yuvarla(sayi, basamak) {
+            var a = Math.pow(10, basamak);
+            return Math.round(sayi * a) / a;
+        }
+
+
+        var bilgiler = new Array();
+
+        var o = new Object(); o.ProductID = 1; o.ProductName = "Chai"; o.CategoryID = 1; o.UnitPrice = 18.00; o.UnitsInStock = 39; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 2; o.ProductName = "Chang"; o.CategoryID = 1; o.UnitPrice = 19.00; o.UnitsInStock = 17; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 3; o.ProductName = "Aniseed Syrup"; o.CategoryID = 2; o.UnitPrice = 10.00; o.UnitsInStock = 13; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 4; o.ProductName = "Chef Anton's Cajun Seasoning"; o.CategoryID = 2; o.UnitPrice = 22.00; o.UnitsInStock = 53; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 5; o.ProductName = "Chef Anton's Gumbo Mix"; o.CategoryID = 2; o.UnitPrice = 21.35; o.UnitsInStock = 0; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 6; o.ProductName = "Grandma's Boysenberry Spread"; o.CategoryID = 2; o.UnitPrice = 25.00; o.UnitsInStock = 120; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 7; o.ProductName = "Uncle Bob's Organic Dried Pears"; o.CategoryID = 7; o.UnitPrice = 30.00; o.UnitsInStock = 15; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 8; o.ProductName = "Northwoods Cranberry Sauce"; o.CategoryID = 2; o.UnitPrice = 40.00; o.UnitsInStock = 6; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 9; o.ProductName = "Mishi Kobe Niku"; o.CategoryID = 6; o.UnitPrice = 97.00; o.UnitsInStock = 29; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 10; o.ProductName = "Ikura"; o.CategoryID = 8; o.UnitPrice = 31.00; o.UnitsInStock = 31; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 11; o.ProductName = "Queso Cabrales"; o.CategoryID = 4; o.UnitPrice = 21.00; o.UnitsInStock = 22; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 12; o.ProductName = "Queso Manchego La Pastora"; o.CategoryID = 4; o.UnitPrice = 38.00; o.UnitsInStock = 86; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 13; o.ProductName = "Konbu"; o.CategoryID = 8; o.UnitPrice = 6.00; o.UnitsInStock = 24; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 14; o.ProductName = "Tofu"; o.CategoryID = 7; o.UnitPrice = 23.25; o.UnitsInStock = 35; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 15; o.ProductName = "Genen Shouyu"; o.CategoryID = 2; o.UnitPrice = 15.50; o.UnitsInStock = 39; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 16; o.ProductName = "Pavlova"; o.CategoryID = 3; o.UnitPrice = 17.45; o.UnitsInStock = 29; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 17; o.ProductName = "Alice Mutton"; o.CategoryID = 6; o.UnitPrice = 39.00; o.UnitsInStock = 0; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 18; o.ProductName = "Carnarvon Tigers"; o.CategoryID = 8; o.UnitPrice = 62.50; o.UnitsInStock = 42; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 19; o.ProductName = "Teatime Chocolate Biscuits"; o.CategoryID = 3; o.UnitPrice = 9.20; o.UnitsInStock = 25; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 20; o.ProductName = "Sir Rodney's Marmalade"; o.CategoryID = 3; o.UnitPrice = 81.00; o.UnitsInStock = 40; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 21; o.ProductName = "Sir Rodney's Scones"; o.CategoryID = 3; o.UnitPrice = 10.00; o.UnitsInStock = 3; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 22; o.ProductName = "Gustaf's Knäckebröd"; o.CategoryID = 5; o.UnitPrice = 21.00; o.UnitsInStock = 104; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 23; o.ProductName = "Tunnbröd"; o.CategoryID = 5; o.UnitPrice = 9.00; o.UnitsInStock = 61; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 24; o.ProductName = "Guaraná Fantástica"; o.CategoryID = 1; o.UnitPrice = 4.50; o.UnitsInStock = 20; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 25; o.ProductName = "NuNuCa Nuß-Nougat-Creme"; o.CategoryID = 3; o.UnitPrice = 14.00; o.UnitsInStock = 76; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 26; o.ProductName = "Gumbär Gummibärchen"; o.CategoryID = 3; o.UnitPrice = 31.23; o.UnitsInStock = 15; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 27; o.ProductName = "Schoggi Schokolade"; o.CategoryID = 3; o.UnitPrice = 43.90; o.UnitsInStock = 49; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 28; o.ProductName = "Rössle Sauerkraut"; o.CategoryID = 7; o.UnitPrice = 45.60; o.UnitsInStock = 26; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 29; o.ProductName = "Thüringer Rostbratwurst"; o.CategoryID = 6; o.UnitPrice = 123.79; o.UnitsInStock = 0; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 30; o.ProductName = "Nord-Ost Matjeshering"; o.CategoryID = 8; o.UnitPrice = 25.89; o.UnitsInStock = 10; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 31; o.ProductName = "Gorgonzola Telino"; o.CategoryID = 4; o.UnitPrice = 12.50; o.UnitsInStock = 0; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 32; o.ProductName = "Mascarpone Fabioli"; o.CategoryID = 4; o.UnitPrice = 32.00; o.UnitsInStock = 9; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 33; o.ProductName = "Geitost"; o.CategoryID = 4; o.UnitPrice = 2.50; o.UnitsInStock = 112; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 34; o.ProductName = "Sasquatch Ale"; o.CategoryID = 1; o.UnitPrice = 14.00; o.UnitsInStock = 111; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 35; o.ProductName = "Steeleye Stout"; o.CategoryID = 1; o.UnitPrice = 18.00; o.UnitsInStock = 20; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 36; o.ProductName = "Inlagd Sill"; o.CategoryID = 8; o.UnitPrice = 19.00; o.UnitsInStock = 112; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 37; o.ProductName = "Gravad lax"; o.CategoryID = 8; o.UnitPrice = 26.00; o.UnitsInStock = 11; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 38; o.ProductName = "Côte de Blaye"; o.CategoryID = 1; o.UnitPrice = 263.50; o.UnitsInStock = 17; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 39; o.ProductName = "Chartreuse verte"; o.CategoryID = 1; o.UnitPrice = 18.00; o.UnitsInStock = 69; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 40; o.ProductName = "Boston Crab Meat"; o.CategoryID = 8; o.UnitPrice = 18.40; o.UnitsInStock = 123; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 41; o.ProductName = "Jack's New England Clam Chowder"; o.CategoryID = 8; o.UnitPrice = 9.65; o.UnitsInStock = 85; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 42; o.ProductName = "Singaporean Hokkien Fried Mee"; o.CategoryID = 5; o.UnitPrice = 14.00; o.UnitsInStock = 26; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 43; o.ProductName = "Ipoh Coffee"; o.CategoryID = 1; o.UnitPrice = 46.00; o.UnitsInStock = 17; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 44; o.ProductName = "Gula Malacca"; o.CategoryID = 2; o.UnitPrice = 19.45; o.UnitsInStock = 27; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 45; o.ProductName = "Rogede sild"; o.CategoryID = 8; o.UnitPrice = 9.50; o.UnitsInStock = 5; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 46; o.ProductName = "Spegesild"; o.CategoryID = 8; o.UnitPrice = 12.00; o.UnitsInStock = 95; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 47; o.ProductName = "Zaanse koeken"; o.CategoryID = 3; o.UnitPrice = 9.50; o.UnitsInStock = 36; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 48; o.ProductName = "Chocolade"; o.CategoryID = 3; o.UnitPrice = 12.75; o.UnitsInStock = 15; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 49; o.ProductName = "Maxilaku"; o.CategoryID = 3; o.UnitPrice = 20.00; o.UnitsInStock = 10; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 50; o.ProductName = "Valkoinen suklaa"; o.CategoryID = 3; o.UnitPrice = 16.25; o.UnitsInStock = 65; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 51; o.ProductName = "Manjimup Dried Apples"; o.CategoryID = 7; o.UnitPrice = 53.00; o.UnitsInStock = 20; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 52; o.ProductName = "Filo Mix"; o.CategoryID = 5; o.UnitPrice = 7.00; o.UnitsInStock = 38; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 53; o.ProductName = "Perth Pasties"; o.CategoryID = 6; o.UnitPrice = 32.80; o.UnitsInStock = 0; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 54; o.ProductName = "Tourtière"; o.CategoryID = 6; o.UnitPrice = 7.45; o.UnitsInStock = 21; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 55; o.ProductName = "Pâté chinois"; o.CategoryID = 6; o.UnitPrice = 24.00; o.UnitsInStock = 115; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 56; o.ProductName = "Gnocchi di nonna Alice"; o.CategoryID = 5; o.UnitPrice = 38.00; o.UnitsInStock = 21; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 57; o.ProductName = "Ravioli Angelo"; o.CategoryID = 5; o.UnitPrice = 19.50; o.UnitsInStock = 36; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 58; o.ProductName = "Escargots de Bourgogne"; o.CategoryID = 8; o.UnitPrice = 13.25; o.UnitsInStock = 62; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 59; o.ProductName = "Raclette Courdavault"; o.CategoryID = 4; o.UnitPrice = 55.00; o.UnitsInStock = 79; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 60; o.ProductName = "Camembert Pierrot"; o.CategoryID = 4; o.UnitPrice = 34.00; o.UnitsInStock = 19; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 61; o.ProductName = "Sirop d'érable"; o.CategoryID = 2; o.UnitPrice = 28.50; o.UnitsInStock = 113; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 62; o.ProductName = "Tarte au sucre"; o.CategoryID = 3; o.UnitPrice = 49.30; o.UnitsInStock = 17; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 63; o.ProductName = "Vegie-spread"; o.CategoryID = 2; o.UnitPrice = 43.90; o.UnitsInStock = 24; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 64; o.ProductName = "Wimmers gute Semmelknödel"; o.CategoryID = 5; o.UnitPrice = 33.25; o.UnitsInStock = 22; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 65; o.ProductName = "Louisiana Fiery Hot Pepper Sauce"; o.CategoryID = 2; o.UnitPrice = 21.05; o.UnitsInStock = 76; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 66; o.ProductName = "Louisiana Hot Spiced Okra"; o.CategoryID = 2; o.UnitPrice = 17.00; o.UnitsInStock = 4; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 67; o.ProductName = "Laughing Lumberjack Lager"; o.CategoryID = 1; o.UnitPrice = 14.00; o.UnitsInStock = 52; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 68; o.ProductName = "Scottish Longbreads"; o.CategoryID = 3; o.UnitPrice = 12.50; o.UnitsInStock = 6; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 69; o.ProductName = "Gudbrandsdalsost"; o.CategoryID = 4; o.UnitPrice = 36.00; o.UnitsInStock = 26; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 70; o.ProductName = "Outback Lager"; o.CategoryID = 1; o.UnitPrice = 15.00; o.UnitsInStock = 15; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 71; o.ProductName = "Flotemysost"; o.CategoryID = 4; o.UnitPrice = 21.50; o.UnitsInStock = 26; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 72; o.ProductName = "Mozzarella di Giovanni"; o.CategoryID = 4; o.UnitPrice = 34.80; o.UnitsInStock = 14; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 73; o.ProductName = "Röd Kaviar"; o.CategoryID = 8; o.UnitPrice = 15.00; o.UnitsInStock = 101; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 74; o.ProductName = "Longlife Tofu"; o.CategoryID = 7; o.UnitPrice = 10.00; o.UnitsInStock = 4; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 75; o.ProductName = "Rhönbräu Klosterbier"; o.CategoryID = 1; o.UnitPrice = 7.75; o.UnitsInStock = 125; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 76; o.ProductName = "Lakkalikööri"; o.CategoryID = 1; o.UnitPrice = 18.00; o.UnitsInStock = 57; bilgiler[bilgiler.length] = o;
+        var o = new Object(); o.ProductID = 77; o.ProductName = "Original Frankfurter grüne Soße"; o.CategoryID = 2; o.UnitPrice = 13.00; o.UnitsInStock = 32; bilgiler[bilgiler.length] = o;
+
+        //document.write(bilgiler);
+        var toplam = 0.0;
+
+        var sayfa = parseInt(prompt("Hangi Sayfa ", 5));
+        var bas = ((sayfa - 1) * 10);
+        var son = bas + 10 - 1;
+
+        document.write("<table><thead><tr><th>Index</th><th>CategoryID</th><th>ProductID</th><th>Product Name</th><th>Unit Price</th><th>Units In Stock</th><th>Stock Price</th></tr></thead><tbody>");
+        //for (var i in bilgiler) {
+
+        //    if (i < bas) continue;
+        //    if (i > son) break;
+        for (var i = bas; i <= son; i++) {
+
+            document.write("<tr>");
+            document.write("<td>" +
+                i + "</td>");
+
+            document.write("<td>" +
+                bilgiler[i].CategoryID + "</td>");
+
+            document.write("<td>" +
+                bilgiler[i].ProductID + "</td>");
+
+            document.write("<td>" +
+                bilgiler[i].ProductName + "</td>");
+
+            document.write("<td>" +
+                bilgiler[i].UnitPrice + "</td>");
+
+            document.write("<td>" +
+                bilgiler[i].UnitsInStock + "</td>");
+
+            document.write("<td>" +
+                Yuvarla(bilgiler[i].UnitPrice * bilgiler[i].UnitsInStock, 2) + "</td>");
+
+            toplam += Yuvarla(bilgiler[i].UnitPrice * bilgiler[i].UnitsInStock, 2);
+
+            document.write("</tr>");
+        }
+        document.write("</tbody><tfooter>");
+        document.write("<tr><td colspan=5>Genel Toplam</td><td>" + Yuvarla(toplam, 2) + "</td></tr>");
+        document.write("</tfooter></table>");
+    </script>
+
+</body>
+</html>

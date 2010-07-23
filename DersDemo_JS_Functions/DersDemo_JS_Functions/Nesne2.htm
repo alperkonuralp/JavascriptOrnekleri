@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        var bilgiler = new Array();
+
+        bilgiler[0] = new Object();
+        bilgiler[0].Ad = "ABD Doları";
+        bilgiler[0].AlisFiyati = 1.56;
+        bilgiler[0].SatisFiyati = 1.58;
+
+
+        bilgiler[1] = new Object();
+        bilgiler[1].Ad = "Euro";
+        bilgiler[1].AlisFiyati = 1.99;
+        bilgiler[1].SatisFiyati = 2.01;
+
+
+        bilgiler[2] = new Object();
+        bilgiler[2].Ad = "İngiliz Sterlini";
+        bilgiler[2].AlisFiyati = 2.2;
+        bilgiler[2].SatisFiyati = 2.22;
+
+        bilgiler[3] = new Object();
+        bilgiler[3].Ad = "IMKB 100 Endeksi";
+        bilgiler[3].Fiyat = 59299.74;
+
+        bilgiler[4] = new Object();
+        bilgiler[4].Ad = "Altın";
+        bilgiler[4].Fiyat = 58.8517;
+
+    </script>
+
+</head>
+<body>
+    <table>
+
+        <script type="text/javascript">
+            for (var i in bilgiler) {
+                document.write("<tr><td>");
+                document.write(bilgiler[i].Ad);
+                document.write("</td><td>");
+                if (bilgiler[i].Fiyat) {
+                    document.write(
+                        "Fiyat : " + bilgiler[i].Fiyat);
+                }
+                else {
+                    document.write(
+                        "Alış Fiyatı : " +
+                        bilgiler[i].AlisFiyati +
+                        " Satış Fiyatı : " +
+                        bilgiler[i].SatisFiyati);
+                }
+                document.write("</td></tr>");
+            }
+
+            
+        </script>
+
+    </table>
+    
+    <script type="text/javascript">
+        var para =
+                parseFloat(prompt("Elinizdeki parayı giriniz"));
+
+        for (var i in bilgiler) {
+            if (bilgiler[i].Ad.substring(0, 4) == "IMKB") continue;
+
+            if (bilgiler[i].Fiyat) {
+                document.write(para + "TL ile " +
+                        bilgiler[i].Ad + "'dan " +
+                        (para / bilgiler[i].Fiyat) +
+                        " birim alabilirsiniz.");
+            }
+            else {
+                document.write(para + "TL ile " +
+                        bilgiler[i].Ad + "'dan " +
+                        (para / bilgiler[i].SatisFiyati) +
+                        " birim alabilirsiniz.");
+            }
+        }
+    </script>
+</body>
+</html>

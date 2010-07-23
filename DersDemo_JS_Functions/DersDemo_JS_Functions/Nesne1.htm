@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        function OrtHes() {
+            return Math.round(this.Vize * 0.4 + this.Final * 0.6);
+        };
+        var o1 = new Object();
+        var o1 = {};
+
+        o1.Ad = 'Alper';
+        o1.Soyad = 'Konuralp';
+        o1.No = 123;
+        o1.Vize = 45;
+        o1.Final = 75;
+        //    o1.OrtalamaHesapla = function() {
+        //        return Math.round(this.Vize * 0.4 + this.Final * 0.6);
+        //    };
+        o1.OrtalamaHesapla = OrtHes;
+
+
+
+
+        var o2 = {};
+
+        o2.Ad = 'Ali';
+        o2.Soyad = 'Konuralp';
+        o2.No = 124;
+        o2.Vize = 55;
+        o2.Final = 85;
+        //    o2.OrtalamaHesapla = function() {
+        //        return Math.round(this.Vize * 0.4 + this.Final * 0.6);
+        //    };
+        o2.OrtalamaHesapla = OrtHes;
+
+
+        document.write(o1.OrtalamaHesapla());
+        document.write("<br/>");
+        document.write(o2.OrtalamaHesapla());
+
+        o1.Engellimi = true;
+
+        o2.AldigiDersler = ["Matematik", "Türkçe", "Fen"];
+
+        document.write("<br/>");
+
+        window.alper = 123;
+        var ali = "Ali Konuralp";
+
+        ali.FirstName = function() {
+            var a = this.toString();
+            var b = a.split(" ");
+            return b[0];
+        };
+
+        document.write(ali);
+
+        document.write(ali.FirstName());
+    
+    
+    </script>
+
+</body>
+</html>

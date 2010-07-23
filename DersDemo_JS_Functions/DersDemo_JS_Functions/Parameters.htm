@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        function Topla(a, b) {
+            document.write(a + " + " + b + " = " + (a + b));
+        }
+
+        function Faktoriyel(a) {
+            var sonuc = 1;
+            for (var i = 2; i <= a; i++) {
+                sonuc *= i;
+            }
+            document.write(a + "! = " + sonuc);
+        }
+
+        function RastgeleSayi(a, b) {
+            var rs = Math.random();
+            rs = rs * (Math.max(a, b) - Math.min(a, b)) + Math.min(a, b);
+            rs = Math.round(rs);
+            document.write(rs);
+        }
+        function RastgeleSayi2(a, b) {
+            var rs = Math.random();
+            rs = rs * (Math.max(a, b) - Math.min(a, b)) + Math.min(a, b);
+            rs = Math.round(rs);
+            return rs;
+        }
+
+        function eb(id) {
+            return document.getElementById(id);
+        }
+    </script>
+
+</head>
+<body>
+<div id="dRS"></div>
+<script type="text/javascript">
+    Topla(2, 3);
+    document.write("<br/>");
+    Topla("mehmet", "ahmet");
+    document.write("<br/>");
+    Faktoriyel(5);
+    document.write("<br/>");
+//    var fa = parseInt(prompt("Kaçın faktöriyelini alalım:"));
+//    Faktoriyel(fa);
+    document.write("<br/>");
+    RastgeleSayi(2, 9);
+    document.write("<br/>");
+    RastgeleSayi(1000, 1);
+    document.write("<br/>");
+    RastgeleSayi(200, -200);
+
+//    var dRS = document.getElementById("dRS");
+    var dRS = eb("dRS");
+    dRS.innerHTML = RastgeleSayi2(400, 1600);
+</script>
+</body>
+</html>
