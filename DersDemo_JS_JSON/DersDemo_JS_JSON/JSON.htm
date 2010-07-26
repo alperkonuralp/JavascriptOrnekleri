@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        // eski yazım şekli
+        var bilgiler = new Array();
+
+
+        var o = new Object();
+        o.ProductID = 1;
+        o.ProductName = "Chai";
+        o.CategoryID = 1;
+        o.UnitPrice = 18.00;
+        o.UnitsInStock = 39;
+        bilgiler[bilgiler.length] = o;
+
+        //JSON Yazımı
+        var bilgiler = [
+            {
+                ProductID: 1,
+                ProductName: "Chai",
+                CategoryID: 1,
+                UnitPrice: 18.00,
+                UnitsInStock: 39,
+                SubProducts: [
+                    {
+                        ProductID: 3,
+                        ProductName: "Chai a",
+                        CategoryID: 1,
+                        UnitPrice: 18.00,
+                        UnitsInStock: 39
+                    },
+                    {
+                        ProductID: 4,
+                        ProductName: "Chai b",
+                        CategoryID: 1,
+                        UnitPrice: 18.00,
+                        UnitsInStock: 39
+                    }
+                ]
+            },
+            {
+                ProductID: 2,
+                ProductName: "Chang",
+                CategoryID: 1,
+                UnitPrice: 19.00,
+                UnitsInStock: 17
+            }
+        ];
+
+        //bilgiler[1].CategoryID
+    </script>
+
+</head>
+<body>
+</body>
+</html>

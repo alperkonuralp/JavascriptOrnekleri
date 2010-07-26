@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        //JSON Yazımı
+        var bilgiler = [
+            {
+                ProductID: 1,
+                ProductName: "Chai",
+                CategoryID: 1,
+                UnitPrice: [18.00, 18.50],
+                UnitsInStock: 39
+            },
+            {
+                ProductID: 2,
+                ProductName: "Chang",
+                CategoryID: 1,
+                UnitPrice: 19.00,
+                UnitsInStock: 17
+            }
+        ];
+    </script>
+
+</head>
+<body>
+    <table>
+
+        <script type="text/javascript">
+            for (var i in bilgiler) {
+                document.write("<tr>");
+                for (var j in bilgiler[i]) {
+                    document.write("<td>");
+
+                    if (bilgiler[i][j].constructor == Array) {
+                        document.write("[ " + bilgiler[i][j] + " ]");
+                    }
+                    else {
+                        document.write(bilgiler[i][j]);
+                    }
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+
+            //            document.write(bilgiler[0].ProductID);
+            //            document.write(bilgiler[0]["ProductID"]);
+            //            if (bilgiler.length) {
+            //                document.write("1Dizi");
+            //            }
+            //            if (bilgiler[0].length) {
+            //                document.write("2Dizi");
+            //            } 
+        </script>
+
+    </table>
+</body>
+</html>
