@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        var resimler = ["m1.jpg", "m2.jpg", "m3.jpg", "m4.jpg", "m5.jpg", "m6.jpg"];
+        window.sayac = 0;
+
+        function ImageNext() {
+            var i1 = document.getElementById("i1");
+
+            window.sayac = (window.sayac + 1) % resimler.length;
+            i1.src = resimler[window.sayac];
+        }
+        function ImageNext2(elm) {
+            elm.style.display = 'none';
+            var b = elm.nextSibling;
+
+            while (b.nodeName != 'IMG') {
+                b = b.nextSibling;
+                if (!b) {
+                    b = elm.parentNode.firstChild;
+                }
+            }
+            b.style.display = 'inline';
+        }
+    </script>
+
+</head>
+<body>
+    <img id="i1" src="m1.jpg" onclick="ImageNext()" width="100" />
+    <div id="imgContainer">
+        <img src="m1.jpg" width="100" onclick="ImageNext2(this);" />
+        <img src="m2.jpg" width="100" style="display: none" onclick="ImageNext2(this);" />
+        <img src="m3.jpg" width="100" style="display: none" onclick="ImageNext2(this);" />
+        <img src="m4.jpg" width="100" style="display: none" onclick="ImageNext2(this);" />
+        <img src="m5.jpg" width="100" style="display: none" onclick="ImageNext2(this);" />
+        <img src="m6.jpg" width="100" style="display: none" onclick="ImageNext2(this);" />
+    </div>
+</body>
+</html>

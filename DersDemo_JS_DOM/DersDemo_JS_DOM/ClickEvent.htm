@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        function ImageClick() {
+            var img1 = document.getElementById("img1");
+
+            /*if (img1.src == 'm1.jpg') {
+            img1.src = 'm2.jpg';
+            }
+            else {
+            img1.src = 'm1.jpg';
+            }*/
+
+            //img1.src = (img1.src.substring(img1.src.length - 6) == 'm1.jpg') ? 'm2.jpg' : 'm1.jpg';
+            img1.src = (img1.src.indexOf('m1.jpg') >= 0) ? 'm2.jpg' : 'm1.jpg';
+        }
+
+        function ImageDblClick() {
+            var img2 = document.getElementById("img2");
+            img2.src = (img2.src.indexOf('m1.jpg') >= 0) ? 'm2.jpg' : 'm1.jpg';
+        }
+    </script>
+
+</head>
+<body>
+    <img src="m1.jpg" width="100" id="img1" onclick="ImageClick()" />
+    <img src="m1.jpg" width="100" id="img2" ondblclick="ImageDblClick()" />
+</body>
+</html>

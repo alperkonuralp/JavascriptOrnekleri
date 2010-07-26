@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        #dArea
+        {
+            width: 90%;
+            margin: 0 auto;
+            height: 300px;
+            border: solid 1px black;
+        }
+        .Point
+        {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            line-height: 1px;
+            background: black none;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function MouseMove(evt) {
+            var dInfo = document.getElementById("dInfo");
+
+            dInfo.innerHTML = 'Event: ' + evt.type + ', X: ' + evt.clientX +
+                ', Y: ' + evt.clientY + ', Button: ' + evt.button;
+
+            if ((evt.button % 2) == 1) {
+                var a = document.createElement("div");
+                a.className = 'Point';
+                a.style.left = evt.clientX + "px";
+                a.style.top = evt.clientY + "px";
+
+                document.body.appendChild(a);
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="dInfo">
+        &nbsp;</div>
+    <div id="dArea" onmousemove="MouseMove(event)" onmousedown="MouseMove(event)" onmo>
+    </div>
+</body>
+</html>

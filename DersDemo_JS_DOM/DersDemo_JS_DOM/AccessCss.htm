@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+</head>
+<body>
+<div id="dFirst">Bu bir yazıdır.</div>
+
+<script type="text/javascript">
+    var a = document.getElementById("dFirst");
+    a.style.color = '#aaaaaa';
+    a.style.fontFamily = 'Verdana, Serif';
+    a.style.width = '200px';
+    a.style.height = '200px';
+    a.style.background = '#dddddd';
+    a.style.position = 'absolute';
+    a.style.top = "20px";
+    if (document.all) {
+        a.style.left = document.documentElement.clientWidth / 2 - 100;
+    }
+    else {
+        a.style.left = (document.body.clientWidth / 2 - 100) + "px";
+    
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function ImageLoaded(elm) {
+            /*if (elm.style.opacity) {
+                elm.style.opacity = 1;
+            }
+            else {
+                //elm.attributes["style"] = 'filter:alpha(opacity=100)';
+                elm.filters[0].opacity = 100;
+            }*/
+            $(elm).css("opacity",1);
+            document.getElementById("dResult").innerHTML = 'ImageLoaded';
+        }
+    </script>
+</head>
+<body>
+<img src="http://freedomwallpaper.com/image_files/1600x1200_HD_Wallpaper_177.jpg" onload="ImageLoaded(this);" style="opacity: 0.5; filter:alpha(opacity= 50);" />
+<div id="dResult"></div>
+</body>
+</html>

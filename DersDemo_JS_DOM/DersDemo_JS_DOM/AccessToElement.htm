@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="dFirst">
+    </div>
+    <div id="dSecond">
+        <table id="tFifth">
+            <tr>
+                <td id="tdThird">
+                </td>
+            </tr>
+            <tr>
+                <td id="tdFourth">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+    </div>
+
+    <script type="text/javascript">
+        /*document.body.childNodes[0].innerHTML = 'Merhaba Dünya';
+        document.body.childNodes[1].childNodes[1].rows[0].cells[0].innerHTML = 'Bu mudur?';
+        document.body.childNodes[1].childNodes[0].tbody.childNodes[1].childNodes[0].innerHTML = 'O mudur?';*/
+
+        var a = document.getElementById("dFirst");
+        var b = document.getElementById("dSecond");
+        var c = document.getElementById("tdThird");
+        var d = document.getElementById("tdFourth");
+        var z = document.getElementById("tFifth");
+
+        a.innerHTML = "Merhaba Dünya";
+        c.innerHTML = "Bu mudur?";
+        d.innerHTML = "O mudur?";
+        a.title = "Yazı yazıldı";
+
+        // 1. yöntem
+        var e = "<span style='color:red'>Deneme</span>";
+        b.innerHTML += e;
+
+        // 2. Yöntem
+        var f = document.createElement("h1");
+        f.innerHTML = "Deneme";
+        f.style.color = 'red';
+        b.appendChild(f);
+
+
+        window.setTimeout("b.removeChild(b.childNodes[0]);", 3000);
+    </script>
+
+</body>
+</html>
