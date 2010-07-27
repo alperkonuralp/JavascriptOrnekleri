@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Calculator</title>
+    <style type="text/css">
+        #tbCalc input
+        {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <table align="center" id="tbCalc">
+        <tr>
+            <td colspan="4" align="center">
+                <input id="tbCalcView" name="tbCalcView" type="text" style="width: 100px; text-align: right" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="C" onclick="" />
+            </td>
+            <td align="center">
+                <input type="button" value="CE" onclick="" />
+            </td>
+            <td align="center">
+                <input type="button" value="Sil" onclick="RakamSil();" />
+            </td>
+            <td align="center">
+                <input type="button" value="/" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="1" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="2" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="3" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="*" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="4" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="5" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="6" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="-" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <input type="button" value="7" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="8" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="9" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="+" />
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                
+            </td>
+            <td align="center">
+                <input type="button" value="0" onclick="RakamEkle(this.value)" />
+            </td>
+            <td align="center">
+                <input type="button" value="+" />
+            </td>
+            <td align="center">
+                <input type="button" value="=" />
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        function RakamEkle(i) {
+            var tbCalcView = document.getElementById("tbCalcView");
+            tbCalcView.value += '' + i;
+        }
+        function RakamSil() {
+            var tbCalcView = document.getElementById('tbCalcView'); 
+            tbCalcView.value = tbCalcView.value.substring(0, tbCalcView.value.length - 1);
+        }
+    </script>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script type="text/javascript">
+        String.prototype.trim = function() {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+
+        var veriler = {
+            'İzmir': ['Konak', 'Karşıyaka', 'Bornova', 'Balçova'],
+            'İstanbul': ['Kadıköy', 'Mecidiye', 'Bakırköy'],
+            'Ankara': ['Çankaya', 'Kızılay', 'Bahçelievler']
+        };
+    </script>
+
+</head>
+<body>
+    <form>
+    <select id="ddlIl" name="ddlIl" onchange="ddlIl_Change()">
+        <option value="">İli Seçiniz</option>
+    </select>
+    <select id="ddlIlce" name="ddlIlce">
+    </select>
+    
+    <select selectedIndex="0"></select>
+    </form>
+
+    <script type="text/javascript">
+        var ddlIl = document.getElementById("ddlIl");
+        var ddlIlce = document.getElementById("ddlIlce");
+
+        for (var i in veriler) {
+            var o = document.createElement("option");
+            o.innerHTML = i;
+            o.value = i;
+            //ddlIl.options[ddlIl.options.length] = o;
+            ddlIl.appendChild(o);
+        }
+
+        function ddlIl_Change() {
+            var ddlIl = document.getElementById("ddlIl");
+            var ddlIlce = document.getElementById("ddlIlce");
+
+            ddlIlce.innerHTML = '';
+
+            var secim = ddlIl.options[ddlIl.selectedIndex].value;
+            if (secim.trim() == '') return;
+
+            for (var i in veriler[secim]) {
+                var o = document.createElement("option");
+                o.innerHTML = o.value = veriler[secim][i];
+                ddlIlce.appendChild(o);
+            }
+        }
+    </script>
+
+</body>
+</html>
