@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login Form</title>
+
+    <script type="text/javascript">
+        String.prototype.trim = function() {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+
+    
+        function FormCheck() {
+            var tbUserName = 
+                document.getElementById("tbUserName");
+            var tbPassword =
+                document.getElementById("tbPassword");
+
+            tbUserName.value = tbUserName.value.trim();
+            tbPassword.value = tbPassword.value.trim();
+            
+            if (tbUserName.value == '') {
+                alert("Lütfen kullanıcı adını giriniz.");
+                tbUserName.focus();
+                return false;
+            }
+            
+            
+            if (tbPassword.value.trim() == '') {
+                alert("Lütfen şifreyi giriniz.");
+                tbPassword.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</head>
+<body>
+    <form name="f1" id="f1" onsubmit="return FormCheck();">
+    <table align="center">
+        <tr>
+            <td colspan="3" align="center">
+                User Login
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                User Name
+            </td>
+            <td align="center">
+                :
+            </td>
+            <td align="left">
+                <input type="text" id="tbUserName" name="tbUserName" maxlength="15" />
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Password
+            </td>
+            <td align="center">
+                :
+            </td>
+            <td align="left">
+                <input type="password" id="tbPassword" name="tbPassword" maxlength="15" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <input type="submit" value="Login" onclick="" />
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
