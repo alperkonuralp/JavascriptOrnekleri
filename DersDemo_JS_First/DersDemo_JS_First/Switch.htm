@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Switch ile karar yapıları</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // bir değişkenin farklı değerlerini tek bir işlemle kontrol
+        // etmeyi sağlar
+        // a == 1 : Ana Sayfa
+        // a == 2 : Ürünler
+        // a == 3 : Hakkımızda
+        // a == 4 : İletişim
+        var a = 1;
+
+        // çözüm için if kullanımı : 
+        if (a == 1) {
+            document.write('Ana Sayfa');
+        }
+        else if (a == 2) {
+            document.write('Ürünler');
+        }
+        else if (a == 3) {
+            document.write('Hakkımızda');
+        }
+        else if (a == 4) {
+            document.write('İletişim');
+        }
+
+        // çözümü switch ile yapmak
+        switch (a) {
+            case 1: // eğer a == 1 ise break'e kadar olan kısmı çalıştır.
+                document.write('Ana Sayfa');
+                break; // kod yazılmış case ifadesini bitirmek için kullanılır.
+            case 2:
+                document.write('Ürünler');
+                break;
+            case 3:
+                document.write('Hakkımızda');
+                break;
+            case 4:
+                document.write('İletişim');
+                break;
+            default:
+                document.write('Lütfen geçerli bir seçim yapınız.');
+                break;
+        }
+
+        // birden fazla değer için case kullanımı
+        switch (a) {
+            case 1:
+            case 101: // a == 1 || a == 101 ise 
+                document.write('Ana Sayfa');
+                break; // kod yazılmış case ifadesini bitirmek için kullanılır.
+            case 2:
+            case 102:
+                document.write('Ürünler');
+                break;
+            case 3:
+                document.write('Hakkımızda');
+                break;
+            case 4:
+                document.write('İletişim');
+                break;
+            default:
+                document.write('Lütfen geçerli bir seçim yapınız.');
+                break;
+        }
+
+        // metin türü değişkenlerle kullanım:
+        var a = 'TC';
+
+        switch (a) {
+            case 'tc':
+            case 'Tc':
+            case 'tC':
+            case 'TC':
+                document.write('Türkiye Cumhuriyeti Vatandaşı');
+                break;
+
+            case 'ABD':
+                document.write('Amerika Birleşik Devletleri Vatandaşı');
+                break;
+
+            default:
+                document.write('Geçerli bir ülke seçiniz.');
+                break;
+        }
+
+        // Switch nerelerde kullanılır:
+        // tek değişkeni, birden fazla tekil değere göre
+        // karşılaştıracaksak switch kullanırız.
+
+        // if nerede kullanılır: 
+        // bütün karar işlemlerinde if kullanılabilir.
+    </script>
+
+</body>
+</html>

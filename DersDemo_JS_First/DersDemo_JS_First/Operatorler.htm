@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operatörler</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // işlemlerimizi yapmamızı sağlayan araçlar operatörlerdir.
+        // = : atama operatörü
+        // + : toplama operatörü
+        // () : işlemlerde gruplama için kullanılır
+
+        // 1. İşlem Operatörleri 
+        // (i = 5 olarak alınsın)
+        // Operatör    |   İşlem    | Örnek | Sonuç
+        // -----------------------------------------
+        // +           | Toplama    |2 + 5  | 7
+        // -           | Çıkartma   |2 - 5  | -3
+        // *           | Çarpma     |2 * 5  | 10
+        // /           | Bölme      |2 / 5  | 0.4
+        // %           | Mod Alma   |12 % 5 | 2
+        // ++          | Arttırma   |i++    | 6 (i=5 alındı.)
+        // --          | Azaltma    |i--    | 4 (i=5 alındı.)
+
+        // 2. Atama Operatörleri
+        // Operatör    |   İşlem          | Örnek | Benzeri
+        // -------------------------------------------------
+        // =           | Atama            |a = 5  |
+        // +=          | Artırarak Atama  |a += 5 | a = a + 5
+        // -=          | Çıkartarak Atama |a -= 5 | a = a - 5
+        // *=          | Çarparak Atama   |a *= 5 | a = a * 5
+        // /=          | Bölerek Atama    |a /= 5 | a = a / 5 
+        // %=          | Mod Alarak Atama |a %= 5 | a = a % 5
+
+
+        // 3. Karşılaştırma Operatörleri
+        // ==  : Eşitliği karşılaştırır ( 5 == '5' : true )
+        // === : Eşitliği karşılaştırır ( 5 === '5': false) hem değer hemde tip eşitliğini kontrol eder.
+        // !=  : Eşit değilliği karşılaştırır. ( 5 != 6 : true)
+        // <   : Küçüklüğü karşılaştırır. ( 5 < 6 : true)
+        var a = 5 < 6; // true
+        var a = 6 < 6; // false
+        // <=  : Küçük veya eşitliği karşılaştırır. ( 5 <= 6 : true)
+        var a = 5 <= 6; // true
+        var a = 6 <= 6; // true
+        // >   : Büyüklüğü karşılaştırır ( 5 > 6 : false)
+        var a = 5 > 6; //false
+        var a = 15 > 3; // true
+        var a = 5 > 5; // false
+        // >=   : Büyük veya eşitliği karşılaştırır ( 5 >= 6 : false)
+        var a = 5 >= 6; //false
+        var a = 15 >= 3; // true
+        var a = 5 >= 5; // true
+
+        // 4. Mantıksal Birleştirme Operatörleri
+        // && : AND ( VE ) anlamındaki opöratördür.
+        // Evet && Evet   = Evet
+        // Evet && Hayır  = Hayır
+        // Hayır && Evet  = Hayır
+        // Hayır && Hayır = Hayır
+        var a = 10;
+        var b = 5;
+        var c = a >= 10 && b <= 10; // true
+
+        // || : OR ( VEYA ) anlamındaki operatördür.
+        // Evet && Evet   = Evet
+        // Evet && Hayır  = Evet
+        // Hayır && Evet  = Evet
+        // Hayır && Hayır = Hayır
+        var a = 10;
+        var b = a == 10 || a == 11 || a == 12 || a == 5; // true
+
+        // ! : NOT ( DEĞİL ) anlamındaki operatördür.
+        // sonucun tersine çevrilmesi için kullanılır.
+        var a = true;
+        var b = !a; // false
+        var a = 10;
+        var b = !(a == 10); //false
+        var b = a != 10; // false
+
+        // İşlem Öncelikleri :
+        // ()
+        // ! ++ --
+        // * /
+        // + -
+        // == !=
+        // &&
+        // ||
+        // = += -=
+
+        var a = 25 * 4 + 78 / 2; // 139
+        // 25 * 4 = 100
+        // 78 / 2 = 39
+        // 100 + 39 = 139
+
+        var a = 48 * 25 / 2 * 98;
+        // 48 * 25 = 1200
+        // 1200 / 2 = 600
+        // 600 * 98 =
+
+        var a = 48 * (25 / (2 * 98));
+        // 2 * 98 = 196
+        // 25 / 196 = ....
+        // 48 * .... =
+
+        var a = (125 - 647 / (78 * 3) * 2) / (54 - 36);
+        // 78 * 3 = 234
+        // 647 / 234 * 2 = 5,5299145299145299145299145299145
+        // 125 - 5,5299145299145299145299145299145 ~= 5 = 120
+        // 54 - 36 = 18
+        // 120 / 18 = ...
+
+        var a = 36;
+        var b = 25;
+        var c = 2;
+        var d = a == 25 || b > 10 && c <= 5; // true
+        // a == 25 : false
+        // b > 10 : true
+        // c <= 5 : true
+        // b > 10 && c <= 5 : true && true : true
+        // a == 25 || true : false || true : true
+
+        var d = a < 50 && b > 5 || a > 10 || c > 80; // true;
+
+        var d = (50 < c && c < 100) || b == 25; // true
+
+        var d = (b == 15 || b == 25 || b == 35) && a == 10; // false
+
+
+ 
+        // özel karşılaştırma operatörü
+        // ?: operatörü olarakta geçer.
+        // ( karşılaştırma ) ? (doğru ise yapılacak) : (yanlış ise yapılacak)
+        var not = 55;
+        // kısa yazılış : 
+        var notYazisi = (not >= 50) ? 'Geçti' : 'Kaldı'; // notYazisi = 'Geçti';
+
+        // if ile kullanımında uzun yazılış:
+        var notYazisi;
+        if (not >= 50) {
+            notYazisi = 'Geçti';
+        }
+        else {
+            notYazisi = 'Kaldı';
+        }
+
+    </script>
+
+</body>
+</html>

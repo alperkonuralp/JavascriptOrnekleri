@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>parseInt ve parseFloat fonksiyonları</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Verimiz metin türündeki bir değişken içinde ise bu sayusal veriyi,
+        // metin türünden sayısal türe çevirmek için parseInt ve parseFloat kullanılır.
+
+        // parseInt tam sayıya çevirir.
+        // parseFloat ondalıklı sayıya çevirir.
+
+        var yas = prompt('Yaşınız : ', 32);
+
+        yas = parseInt(yas);
+
+        alert('10 yıl sonraki yaşınız : ' + (yas + 10));
+
+        // eğer metin içerisinde yazısal elemanlar varsa veya
+        // metin sayıya çevrilemeyecek bir durumda ise,
+        // parseInt ve parseFloat geriye NaN değeri döndürür.
+        // NaN : Not a Number
+        // değişkenin içeriğinin NaN bir değer olup olmadığının
+        // kontrolü isNaN() fonksiyonu ile yapılır.
+        // isNaN() : true değer döndürürse değişken NaN değer içeriyor demektir.
+        // isNaN() : false değer döndürürse değişken NaN değer içermiyor demektir.
+
+
+        var yas = prompt('Yaşınız : ', 32);
+
+        yas = parseInt(yas);
+
+        if (isNaN(yas)) {
+            document.write('Lütfen geçerli bir yaş giriniz.');
+        }
+        else
+            alert('10 yıl sonraki yaşınız : ' + (yas + 10));
+        
+    </script>
+
+</body>
+</html>

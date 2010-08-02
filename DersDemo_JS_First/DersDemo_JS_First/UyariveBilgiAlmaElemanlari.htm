@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Confirm, Prompt ve Alert Komutları</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Alert : dışarıya bir yazıyı uyarı penceresi ile vermeyi sağlar.
+        alert("Mesaj");
+        // kullanıcının karşısına çıkan pencerede sadece OK tuşu yer alır.
+
+
+        // Confirm: Dışarıya bir yazıyı uyarı penceresi ile vermeyi sağlar.
+        // pencerede OK ve Cancel tuşları yer alır. Geriye eğer OK tuşuna
+        // basılmışsa true, Cancel tuşuna basılmışsa false döndürür.
+        // Herhangi bir iş için kullanıcının onayını almak için kullanılabilir.
+
+        var b = confirm("Bu bilgiyi silmek istediğinize emin misiniz?");
+        if (b) {
+            // bilgi silinir.
+            alert('Bilgi Silindi.');
+        }
+        else {
+            alert('İşlem iptal edildi.');
+        }
+
+        // Prompt : kullanıcıdan herhangi bir veriyi almak için kullanılır.
+        var a = prompt('Yaşınız', 32);
+        // ilk parametre mesajı , 2. parametre ise default değeri gösterir.
+        // bu komut geriye metin türünde bir sonuç döndürür.
+        
+        
+    </script>
+
+</body>
+</html>

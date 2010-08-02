@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>While Döngüsü</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // bir işi birden fazla kere yapmak için kullanılan elemanlara
+        // döngüler denir.
+
+        // while verilen koşul doğru olduğu ürece verilen kodları
+        // çalıştıran bir döngüdür.
+        // yazımı :
+        // while (KOŞUL) {
+        //     Tekrarlanacak işlemler
+        // }
+
+        var i = 1;
+        while (i <= 10) {
+            document.write('<div>' + i + '</div>');
+            i++; // while döngüsünde döngü değişkenini döngü bloğu içerisinde
+            // mutlaka değiştirmemiz gerekmektedir. Yoksa döngü sonsuz döngüye
+            // girer.
+        }
+
+        //örnek 1 : iç içe while kullanımı:
+        var i = 1; // döngü değişkenini tanımlarız
+
+        document.write('<table border=1>'); // ekrana tabloyu başlatan html kodunu göndeririz.
+        while (i <= 10) { // i döngü değişkeninin 10 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+            document.write('<tr>'); // satır'ı başlatan html ifadesini yazarız.
+            var j = 1; // hücreler için kullanacağımız döngü değişkenini tanımlarız.
+            while (j <= 5) { // j döngü değişkeninin 5 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+                document.write('<td>'); // hücreyi başlatan html ifadesini yazarız.
+                document.write('i: ' + i + ', j: ' + j); // hücrenin içerisine istediğimiz bilgiyi yazarız.
+                document.write('</td>'); // hücreyi kapatırız.
+
+                j++; // döngü değişkenini arttırırız.
+            }
+            document.write('</tr>'); // satırı kapatırız.
+            i++; // döngü değişkenini arttırırız.
+        }
+        document.write('</table>'); // tabloyu kapatırız.
+
+
+        // iç içe while kullanımında döngü değişkenlerinin birbirini etkilemesi
+        var i = 1; // döngü değişkenini tanımlarız
+
+        document.write('<table border=1>'); // ekrana tabloyu başlatan html kodunu göndeririz.
+        while (i <= 10) { // i döngü değişkeninin 10 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+            document.write('<tr>'); // satır'ı başlatan html ifadesini yazarız.
+            var j = 1; // hücreler için kullanacağımız döngü değişkenini tanımlarız.
+            while (j <= (11 - i)) { // j döngü değişkeninin 5 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+                document.write('<td>'); // hücreyi başlatan html ifadesini yazarız.
+                document.write('i: ' + i + ', j: ' + j); // hücrenin içerisine istediğimiz bilgiyi yazarız.
+                document.write('</td>'); // hücreyi kapatırız.
+
+                j++; // döngü değişkenini arttırırız.
+            }
+            document.write('</tr>'); // satırı kapatırız.
+            i++; // döngü değişkenini arttırırız.
+        }
+        document.write('</table>'); // tabloyu kapatırız.
+
+        // iç içe döngüler ile if kullanımı
+        var i = 1; // döngü değişkenini tanımlarız
+
+        document.write('<table border=1>'); // ekrana tabloyu başlatan html kodunu göndeririz.
+        while (i <= 10) { // i döngü değişkeninin 10 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+            document.write('<tr>'); // satır'ı başlatan html ifadesini yazarız.
+            var j = 1; // hücreler için kullanacağımız döngü değişkenini tanımlarız.
+            while (j <= 10) { // j döngü değişkeninin 5 değerinden küçük ve eşit olduğu durumlarda dönmesini sağlayacak döngüyü başlatırız.
+                document.write('<td>'); // hücreyi başlatan html ifadesini yazarız.
+                if (i != j && i != (11 - j)) {
+                    document.write('i: ' + i + ', j: ' + j); // hücrenin içerisine istediğimiz bilgiyi yazarız.
+                }
+                document.write('</td>'); // hücreyi kapatırız.
+
+                j++; // döngü değişkenini arttırırız.
+            }
+            document.write('</tr>'); // satırı kapatırız.
+            i++; // döngü değişkenini arttırırız.
+        }
+        document.write('</table>'); // tabloyu kapatırız.
+
+
+        //do-while : while döngüsünde işlem öncesi koşul kontrolü
+        // yapılırken do-while döngüsünde işlem sonrası koşul
+        // kontrolü yapılır. Bu sebeple do-while ne olursa olsun
+        // bir kez çalışırken while hiç çalışmayabilir.
+        var i = 1;
+        do {
+            document.write('<div>' + i++ + '</div>');
+        } while (i <= 10);
+
+        // while ile do while arasındaki tek fark :
+        // aşağıdaki örnekte olduğu gibi burada dowhile 1 kere çalışır.
+        var i = 11;
+        do {
+            document.write('<div> Do-While ' + i++ + '</div>');
+        } while (i <= 10);
+        //aynı işi yapan while hiç çalışmaz.
+        var i = 11;
+        while (i <= 10) {
+            document.write('<div>While ' + i++ + '</div>');
+        }
+
+        // ters döngü
+        var i = 10;
+        while (i >= 1) {
+            document.write('<div>' + i-- + '</div>');
+        }
+    </script>
+
+</body>
+</html>

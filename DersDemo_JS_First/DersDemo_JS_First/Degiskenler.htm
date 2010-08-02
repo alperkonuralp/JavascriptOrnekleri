@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Javascript Değişkenleri</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Tanımlama ve Atama Ayrı
+        var a; // değişkeni tanımlıyoruz.
+        a = 10; // değişkene değer atıyoruz.
+         
+        // hem tanımlama hemde atama tek satırda
+        var a = 10;
+
+        // = atama operatoru olarak kullanılmaktadır.
+
+        // Javascript'te değişkeni öndecen tanımlamaya zorunlu değildir.
+        b = a + 25;
+        // js eğer değişken tanımlı değil ise bu değişkeni tanımlar.
+
+        // ikinci bir tanımlama yaparsam, sadece tanımlama ise
+        // değişkenin değeri değişmez.
+        var a; // a = 10
+
+        // a'yı sadece tanımlamış olmakla kalmayıp,
+        // değerde atadığımız için a'nın değeri 25 olur.
+        var a = 25;
+
+        // yeni bir b değeri tanımladık.
+        b = a * 5;
+
+
+        // değişken tipleri:
+        // 1. Sayısal Tipler:
+        // a) Tamsayı
+        var c = 5;
+        // b) Ondalıklı sayı
+        var d = 15.487954;
+        var e = 15.0; // 15 sayısı tamsayı iken, 15.0 ondalıklı sayıdır.
+
+        // 2. String(Metin) tipi
+        var f = "Merhaba Dünya";
+        var g = 'Merhaba Dünya';
+        //    Eğer yazı içinde " geçecekse metin ayıracı olarak ' kullanılabilir.
+        var h = '"bugün hava ne güzel" dedi.';
+        var i = "Ali'nin dolabı.";
+        //  metin tiplerinde kaçış karakterleri
+        var j = "\"bugün hava ne güzel\" dedi.";
+        //  \ karakteri kaçış karakterini tanımlar. bu karakterden sonra yazılan karakter
+        //  özel anlamını yitirir.
+        //  \" : gerçek hayatta kullandığımız " karakteridir. Metin ayracı özel anlamını yitirmiştir.
+        //  \' : gerçek hayatta kullandığımız ' karakteridir. Metin ayracı özel anlamını yitirmiştir.
+        //  görünmeyen karakterleri veya görünen karakterleri yazmak içinde \ kullanılabilir.
+        //  \r : return cariage - alt satır karakter.
+        //  \n : new line cariage  - yeni satır karakteri
+        //  \t : tab karakteri. 4-8 karakter içeri girinti yapar.
+        //  \x41 : A karakterine karşılık gelir.
+
+        // 3. Evet/Hayır Boolean değişkenler.
+        // true / false değeri barındıran değişkelerdir.
+        // daha çok karşılaştırma işlemlerinde kullanılırlar.
+        var k = true;
+        var l = false;
+
+        // 4. null değeri içeren değişkeler
+        var m = null; // değişkeni artık kullanmayacağımızı bildirir.
+        // null = 0 değildir.
+        // null = '' değildir.
+        // null hiç birşey değildir.
+
+        // değişkelerdeki isimlendirmelerde :
+        // 1. Büyük küçük harf duyarlılığı var : a != A
+        var a = 5;
+        var A = 15; // her ikiside ayrı değişkenlerdir.
+        // 2. İsimlendirmelerde ilk karakter sadece harf veya
+        // _ veya $ kullanılabilir. Diğer karakterler : harf, sayı, _
+        // veya $ işateri olabilir.
+        // 3. Türkçe karakter kullanılabilirse bile kullanmamakta fayda vardır.
+        // 4. javascript komutlarını değişken ismi olarak kullanamayız.
+        // var for = 5; // yazım hatasıdır.
+        
+    </script>
+
+</body>
+</html>
