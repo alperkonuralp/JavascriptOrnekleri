@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Diziler 2</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // girilen verilere göre dizi oluşturmak.
+        var ogsay = parseInt(prompt("Öğrenci Sayısı:", "3"));
+
+        var ogr = new Array();
+
+        for (var i = 0; i < ogsay; i++) { // dizi içi boş olduğu için bu for yöntemini kullanmak zorundayız.
+            var ogisim =
+                prompt((i + 1) + ". Öğrencinin İsmi: ", "");
+            //ogr[i] = ogisim; // 1. yöntem
+            ogr[ogr.length] = ogisim; // 2. yöntem
+        }
+
+
+        document.write("<table border=1>");
+        document.write("<tr><th>Sıra No</th><th>Öğrenci Adı</th></tr>");
+        for (var i in ogr) { // dizinin içi dolu olduğu için bu for yöntemini de kullanabiliriz. İstersek diğerinide kullanabiliriz.
+            document.write("<tr><td>" + (parseInt(i) + 1) +
+                "</td><td>" + ogr[i] + "</td></tr>")
+        }
+        document.write("</table>");
+    </script>
+
+</body>
+</html>

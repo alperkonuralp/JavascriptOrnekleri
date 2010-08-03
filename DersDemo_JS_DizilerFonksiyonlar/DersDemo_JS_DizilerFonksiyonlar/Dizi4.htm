@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dizi Elemanlarını karışık bilgileri tutmak için kullanmak</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // ürünlerle ilgili bazı bilgileri alıp
+        // sonrada bu bilgileri listeleyelim.
+
+        // tek bir stok bilgisini içeren bir dizi tanımladık.
+        var stok = new Array();
+
+        // sırayla bilgileri giriyoruz.
+        stok["StokKodu"] = prompt("Stok Kodunu giriniz:", "");
+        stok["StokAdı"] = prompt("Stok Adını giriniz:", "");
+        stok["BirimFiyatı"] = parseFloat(prompt("Birim Fiyatını giriniz:", ""));
+
+
+        // stok bilgilerini ekrana yazdırıyoruz.
+        document.write("Stok Kodu: " + stok["StokKodu"] + "<br/>");
+        document.write("Stok Adı : " + stok["StokAdı"] + "<br/>");
+        document.write("Birim Fiyatı : " + stok["BirimFiyatı"] + "<br/>");
+    </script>
+
+</body>
+</html>

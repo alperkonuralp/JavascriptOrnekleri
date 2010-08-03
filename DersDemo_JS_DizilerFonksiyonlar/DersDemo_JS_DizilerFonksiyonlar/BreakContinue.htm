@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Break, Continue</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // break ve continue : 
+        // herhangi bir döngünün kırılması veya o andan sonra
+        // yapılacak işlerin atlanması için kullanılan elemanlardır.
+
+        // break : bir döngünün çalışmasını durdurmak için kullanılır.
+        // browser bu kelimeyi gördüğü anda hemen döngünün çalışmasını durdurur.
+        // eğer içiçe döngüler varsa, break o an çalışan döngüyü kırar.
+
+        for (var i = 0; i < 10; i++) {
+            if (i == 5) break;
+            document.write(i + "<br/>")
+        }
+        document.write("İşlem bitti.");
+
+        // iç içe döngülerde break kullanımı
+        for (var i = 0; i < 10; i++) {
+            for (var j = 0; j < 10; j++) {
+                document.write("i: " + i + ", j: " + j + "<br/>");
+                //if (j == 5) break;
+            }
+            if (i == 5) break;
+        }
+
+        // continue : Döngünün continue sonrasındaki adımlarını atlayıp,
+        // bir sonraki adımdan devam etmesini sağlar.
+        // break gibi döngünün tamamını kırmaz. bunun yerine o adımı
+        // kırar.
+
+        for (var i = 0; i < 10; i++) {
+            if (i % 2 == 0) continue;
+            document.write(i + "<br/>");
+        }
+    </script>
+
+</body>
+</html>

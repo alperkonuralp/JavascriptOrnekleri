@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fonksiyon Örnekler</title>
+</head>
+<body>
+    <a href="http://linqjs.codeplex.com/">Linq.js</a>
+
+    <script src="linq-vsdoc.js" type="text/javascript"></script>
+    <script src="linq.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        // 1. girilen parametre n ise, 1'den n'e kadar olan
+        // sayıların toplamını bulan fonksiyonu yazınız.
+
+        function NSayininToplami(n) {
+            var sonuc = 0;
+            for (var i = 1; i <= n; i++) {
+                sonuc += i;
+            }
+            return sonuc;
+        }
+
+        function NSayininToplamiLinq(n) {
+            return Enumerable.Range(1, n).Sum();
+        }
+
+        // 2. girilen parametre n ise, 1'den n'e kadar olan
+        // sayıların çarpımını bulan fonksiyonu yazınız.
+
+        function NSayininCarpimi(n) {
+            var sonuc = 1;
+            for (var i = 2; i <= n; i++) {
+                sonuc *= i;
+            }
+            return sonuc;
+        }
+
+        function NSayininCarpimiLinq(n) {
+            return Enumerable.Range(1, n).Aggregate(1, "a,b=>a*b");
+        }
+
+
+        // 3. girilecek n sayıdan en büyüğünü bulacak bir
+        // fonksiyon yazınız.
+
+        function NSayininEnBuyugu(n) {
+            var sonuc = -1000000;
+            for (var i = 1; i <= n; i++) {
+                var sayi = parseInt(prompt(i + ". Sayıyı giriniz:", "0"));
+                if (sayi > sonuc) sonuc = sayi;
+            }
+            return sonuc;
+        }
+
+        function NSayininEnBuyuguLinq(n) {
+            var dizi = new Array();
+            for (var i = 1; i <= n; i++) {
+                dizi.push(parseInt(prompt(i + ". Sayıyı giriniz:", "0")));
+            }
+            return Enumerable.From(dizi).Max();
+        }
+
+
+        function dw(msg) {
+            document.write(msg);
+        }
+
+        dw("1 den 10'a kadar olan sayıların toplamı : " + NSayininToplami(10) + "<br/>");
+        dw("1 den 10'a kadar olan sayıların toplamı (Linq) : " + NSayininToplamiLinq(10) + "<br/>");
+
+        dw("<br/>");
+        dw("<br/>");
+
+        dw("1 den 10'a kadar olan sayıların çarpımı : " + NSayininCarpimi(10) + "<br/>");
+        dw("1 den 10'a kadar olan sayıların çarpımı (Linq) : " + NSayininCarpimiLinq(10) + "<br/>");
+
+        dw("<br/>");
+        dw("<br/>");
+
+        dw("5 tane sayının en büyüğü: " + NSayininEnBuyugu(5) + "<br/>");
+        dw("5 tane sayının en büyüğü (Linq) : " + NSayininEnBuyuguLinq(5) + "<br/>");
+        
+    </script>
+
+</body>
+</html>

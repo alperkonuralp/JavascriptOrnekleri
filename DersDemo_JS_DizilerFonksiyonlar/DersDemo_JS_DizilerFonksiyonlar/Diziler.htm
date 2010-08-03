@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Diziler</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // diziler : bilgilerin tek bir eleman altında tek bir ad
+        // üzerinden ulaşılabileceği bir elemandır.
+
+        // Faydası: bütün veriler için yapılacak işi döngü ile
+        // yapmamızı sağlayarak, yazmamız gereken kodu azaltır.
+        // Ör:
+        var a1 = 5;
+        var a2 = 10;
+        var a3 = 11;
+        var a4 = 9;
+        var a5 = 3;
+        // bu değişklenlerin tamamına 5 ilave etmek istiyoruz:
+        a1 += 5;
+        a2 += 5;
+        a3 += 5;
+        a4 += 5;
+        a5 += 5;
+        // eğer bu liste 100 tane olsaydı o zaman yazmamız gereken
+        // satırda en az 100 tane olacaktı.
+        // bu işi dizi ile yapmış olsaydık:
+        var a = new Array(5, 10, 11, 9, 3); // diziyi tanımladık.
+        for (var i = 0; i < a.length; i++) {
+            a[i] += 5;
+        }
+
+        // dizide her zaman için index 0 dan başlar.
+        // dizinin içindeki eleman sayısı (bazı durumlarda yanlış
+        // olur) dizinin length özelliği ile bulunur.
+        // --0---1----2----3---4-- <- indeksler  
+        // | 5 | 10 | 11 | 9 | 3 | <- verileri gösteriyor.
+        // |[0]|[1] |[2] |[3]|[4]| <- javascript erişimi
+
+        // eğer
+        document.write(a[1]);
+        // şeklinde bir yazım yaparsam. bu dizi elemanının
+        // içindeki veriyi okuduğum anlamına gelir.
+
+        // eğer
+        a[5] = 12;
+        // şeklinde bir yazım yaparsam, o zaman dizinin 5
+        // indeksine bir veri girişi yaptığımı söylerim.
+        // eğer bu indeks yoksa browser otomatikman bu indeksi
+        // oluşturur. varsa var olan bilginin yerine yeni
+        // bilgiyi ekler
+
+        document.write("<br/>");
+        
+        // for diziler için özelliştirilmiş bir kullanımada
+        // sahiptir.
+        // for (var i = 0; i < a.length; i++) {
+        // yazım yerine
+        // for(var i in a) {
+        // şeklindeki yazımıda kullanabiliriz. Bu yazımda
+        // for dizi içerisinde bir döngü oluşturur.
+        // döngünün her adımında dizinin sıradaki elemanının
+        // indeks değeri i değişkenine aktarılır. bu i değişkeni
+        // kullanılarak dizinin o adımdaki değerine ulaşılabilir.
+        // Ör:
+        for (var i in a) {
+            document.write(a[i] + "<br/>");
+        }
+        
+        
+    </script>
+
+</body>
+</html>

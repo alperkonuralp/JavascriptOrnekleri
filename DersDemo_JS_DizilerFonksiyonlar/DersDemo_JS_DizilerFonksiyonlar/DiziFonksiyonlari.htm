@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dizilerde kullanılan fonksiyonlar</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // concat : Birden fazla diziyi birleştirip tek bir dizi
+        // haline getirir.
+        var a = new Array(1, 2, 3, 4, 5);
+        var b = new Array(6, 7);
+        var c = new Array(8, 9, 10);
+        var d = a.concat(b, c);
+        document.write(a);
+        document.write("<br/>");
+        document.write(d);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+        // join : dizi elemanlarını bir ayraç ile birleştirmeyi
+        // sağlar.
+        var e = a.join();
+        var f = d.join("|");
+        document.write(e);
+        document.write("<br/>");
+        document.write(f);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+
+        // push : dizinin en son sırasına yeni bir eleman ekler
+
+        a.push(999);
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+        //pop : dizinin en son sırasındaki elemanı geri verir
+        // aynı zamanda bu elemanı dizidende siler
+        var g = a.pop();
+        document.write(g);
+        document.write("<br/>");
+        document.write(a);
+
+        document.write("<br/>");
+
+        var g = a.pop();
+        document.write(g);
+        document.write("<br/>");
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+        // reverse : dizinin elemanlarını baş aşağı getirmeyi sağlar
+        a.reverse();
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+
+        // shift : pop'un yaptığına benzer bir iş yapar.
+        // pop dizinin son elemanına işlem yaparken, bu dizinin
+        // ilk elemanına işlem yapar.
+        var h = a.shift();
+        document.write(h);
+        document.write("<br/>");
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+        // unshift : push ile benzelik gösterir. push dizinin
+        // sonuna eleman eklerken, bu dizinin başına eleman ekler.
+        a.unshift(999);
+        a.unshift(888);
+        
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+
+
+        // slice : dizinin içerisinden bir dizi parçası çıkartmak
+        // için kullanılır. ancak bu elemanlar asıl dizinin 
+        // içinden silinmez. Ayrıca 2. parametredeki indeks hariç 
+        // sonuç alınır.
+        var i = a.slice(1, 3);
+
+        document.write(i);
+        document.write("<br/>");
+        document.write(a);
+
+        document.write("<br/>");
+        document.write("<br/>");
+        
+    </script>
+
+</body>
+</html>

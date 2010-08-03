@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fonksiyonlar</title>
+</head>
+<body>
+    İlk Sayı :
+    <input id="i1" type="text" value="22354" />
+    <br />
+    İkinci Sayı :
+    <input id="i2" type="text" value="4564561" />
+    <br />
+    <div id="d1">
+    </div>
+
+    <script type="text/javascript">
+        // fonksiyonlar : küçük iş parçalarını ifade eder.
+        // fonksiyonları kullanarak, kodların tekrardan
+        // yazılmalarını önleyebilir, aynı iş için daha az kod
+        // yazmayı sağlayabiliriz.
+        // Veya özel durumlar, olaylar v.b. işler için
+        // fonksiyon kullanabiliriz.
+
+        // en basit fonksiyon şu şekilde tanımlanır:
+        function Deneme() {
+            document.write("Deneme<br/>");
+        }
+
+        // tanımlanan fonksiyon artık çağırılabilir.
+        Deneme();
+
+        // fonksiyon bir kere tanımlanır, birden fazla kere
+        // çağırılabilir. tanımlanan bir fonsiyon tekrar
+        // tanımlanamaz.
+
+        // fonksiyonlar özel yapacakları işe göre, özel değerler
+        // ve bilgiler alabilmeleri gerekir. Bu bilgiler parametreler
+        // yardımıyla fonksiyonlara geçirilir.
+        function Topla(a, b) {
+            document.write("a + b = " + a + " + " + b + " = " + (a + b) + "<br/>");
+        }
+
+        // bir başka deyimle; parametreler fonksiyonların aynı işi
+        // birden fazla değere göre yapabilmelerini sağlar.
+
+        // ÖR:
+
+        document.write("a + b = " + 5 + " + " + 4 + " = " + (5 + 4) + "<br/>");
+        document.write("a + b = " + 987 + " + " + 325 + " = " + (987 + 325) + "<br/>");
+        document.write("a + b = " + (-15) + " + " + (-23) + " = " + (-15 - 23) + "<br/>");
+        document.write("a + b = " + 7145 + " + " + 1124 + " = " + (7145 + 1124) + "<br/>");
+
+        Topla(5, 4);
+        Topla(987, 325);
+        Topla(-15, -23);
+        Topla(7145, 1124);
+        Topla(
+            parseInt(prompt("İlk Sayı: ", 5)),
+            parseInt(prompt("İkinci Sayı: ", 15)));
+
+        var i1 = document.getElementById("i1");
+        var i2 = document.getElementById("i2");
+        Topla(parseInt(i1.value), parseInt(i2.value));
+
+
+        function Topla2() {
+            var a = parseInt(prompt("İlk Sayı: ", 5));
+            var b = parseInt(prompt("İkinci Sayı: ", 5));
+            document.write("a + b = " + a + " + " + b + " = " + (a + b));
+        }
+
+        // alert fonksiyonu :
+        alert("msg");
+        // parseInt fonksiyonu :
+        var a = parseInt("125");
+
+        // dizilerle ilgili son örneklerinde kullandığımız bütün
+        // elemanlar fonksiyondur.
+
+        // Fonksiyonlar dışarıya bir sonuç aktarabilirler.
+        // Ör: prompt fonksiyonunda olduğu gibi
+        var b = prompt("Adınız : ", "");
+        // prompt 2 tane parametre alıyor. Bununla ilgili işi yapıyor.
+        // sonuçta kullanıcadan aldığı değeri geri döndürüyor.
+        // Ör: confirm fonksiyonu.
+        var c = confirm("Emin misiniz?");
+        // 1 parametre alıyor. bununla ilgili işi yapıp, kullanıcının
+        // verdiği cevaba göre geriye true veya false döndürüyor.
+
+        // Ör: parseInt fonksiyonu metin türünde 1 parametre alıyor.
+        // bunu sayısala çevirip geri döndürüyor.
+
+        // Bir fonksiyonun geriye değer döndürebilmesi için fonksiyon
+        // içinde return komutunu kullanabiliriz.
+        // return hem fonksiyonun bitimesini sağlarken, hemde geriye
+        // değer döndürmesini sağlar.
+        // return döngülerdeki break gibi düşünülebilir. Break döngüyü
+        // kırıp çıkarken, return fonksiyonu kırıp çıkar.
+
+        function Say() {
+            for (var i = 0; i < 10; i++) {
+                document.write(i + "<br/>");
+                if (i == 6) break;
+            }
+            document.write("a");
+        }
+
+        function Say2() {
+            for (var i = 0; i < 10; i++) {
+                document.write(i + "<br/>");
+                if (i == 6) return; // sadece fonksiyonu bitirmek için kullanıldı.
+            }
+            document.write("a");
+        }
+
+        Say();
+        Say2();
+
+        function RastgeleSayi() {
+            return Math.round(Math.random() * 1000); // geriye bir değer döndürmek için return kullanıyoruz.
+        }
+
+
+
+        document.write(RastgeleSayi());
+        i1.value = RastgeleSayi();
+        document.getElementById("d1").innerHTML = RastgeleSayi();
+
+        // parametreler ile geri dönüş değerlerinin kullanımı
+        function RastgeleSayi2(min, max) {
+            var m = Math.min(min, max);
+            var n = Math.max(min, max);
+            return m + Math.round(Math.random() * (n - m)); // geriye bir değer döndürmek için return kullanıyoruz.
+        }
+
+        document.write(RastgeleSayi2(100, 500));
+        i1.value = RastgeleSayi2(200, 800);
+        document.getElementById("d1").innerHTML = RastgeleSayi2(1000, 5000);
+
+
+        // Sayısal veri geri döndüren bir fonksiyon yazalım
+        // parseInt ve prompt elemanlarını kullanacak
+        function GetInt(msg) {
+            var x = parseInt(prompt(msg, "0"));
+            return x;
+        }
+
+        var ilkSayi = GetInt("İlk Sayı");
+        var ikinciSayi = GetInt("İkinci Sayı");
+        var sonuc = RastgeleSayi2(ilkSayi, ikinciSayi);
+        document.write("Sonuc : " + sonuc);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>For Döngüsü</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // sınıf listesini oluşturmak
+        var ogsay =
+            parseInt(prompt("Sınıfta kaç kişi var?", "3"));
+
+        document.write("<table border=1>");
+        document.write("<tr><th>Sıra No</th><th>Öğrenci Adı</th></tr>");
+        for (var i = 0; i < ogsay; i++) {
+            document.write("<tr>");
+            document.write("<td>" + (i + 1) + "</td>");
+
+            var ogisim = prompt((i + 1) + ". Öğrencinin Adı: ", "");
+
+            document.write("<td>" + ogisim + "</td>");
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+
+    <table border="1">
+        <tr>
+            <th>
+                Sıra No
+            </th>
+            <th>
+                Ürün Kodu
+            </th>
+            <th>
+                Ürün Adı
+            </th>
+            <th>
+                Birim Fiyatı
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Ekle" />
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+            <td>
+                <input type="text" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

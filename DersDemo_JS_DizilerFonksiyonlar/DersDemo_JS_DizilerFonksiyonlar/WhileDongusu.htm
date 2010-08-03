@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sonsuz While Döngüsü</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    Sıra No
+                </th>
+                <th>
+                    Öğrenci Adı
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <script type="text/javascript">
+                // öğrenci listesini öğrenci sayısını almadan yapalım.
+                var i = 1;
+                while (true) { // for(var i=1;true;i++)
+                    document.write("<tr>");
+                    document.write("<td>" + i + "</td>");
+
+                    var ogisim =
+                        prompt(i + ". Öğrencinin İsmi:", "");
+
+                    document.write("<td>" + ogisim + "</td>");
+
+                    document.write("</tr>");
+                    i++;
+                    if (!confirm("Devam edecekmiyiz?")) break;
+                }
+            </script>
+
+        </tbody>
+    </table>
+</body>
+</html>

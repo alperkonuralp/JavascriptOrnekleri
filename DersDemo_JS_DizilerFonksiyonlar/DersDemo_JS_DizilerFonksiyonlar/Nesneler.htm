@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nesneler</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // herhangi bir bilgi bütününü bir arada tutan yapıya
+        // nesne diyebiliriz. nesne sadece bilgiyi değil
+        // bilgi üzerinde işlem yapan fonksiyonlarıda içinde
+        // barındırabilir. Bu anlamda nesneler kapsayıcı bir
+        // özelliğe sahiptir.
+        // Ör: bir evi nesne olarak düşünebiliriz.
+        // bir arabayı nesne olarak düşünebiliriz.
+        // çünkü bunlar kendi içersinde bilgiler ve işlemler barındırırlar.
+        // aynı ortak temelden gelen bir sürü nesne olabilir.
+        // kooperatif evleri veya apartman daireleri gibi.
+        // herbiri kendi halinde özel ama içindeki standart elemanlar
+        // yüzünden birbirleriye aynıdırlar.
+
+        // Örnek : stok tanımı
+        var stok = new Object();
+        stok.StokKodu = 'a1';
+        stok.StokAdi = 'Kalem';
+        stok.BirimFiyati = 0.75;
+        stok.Adet = 1250;
+        stok.Toplam = function() { return this.BirimFiyati * this.Adet; };
+
+        document.write('<br/>Stok Kodu : ' + stok.StokKodu);
+        document.write('<br/>Stok Adı  : ' + stok.StokAdi);
+        document.write('<br/>Birim Fiyat : ' + stok.BirimFiyati);
+        document.write('<br/>Adet : ' + stok.Adet);
+        document.write('<br/>Toplam Fiyat : ' + stok.Toplam());
+        
+
+    </script>
+
+</body>
+</html>

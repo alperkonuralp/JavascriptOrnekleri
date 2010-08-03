@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dizilerde sayısal olmayan indeks kullanımı</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // dizilerde kullanılan indeks tanımları default olarak
+        // 0 dan başlar ve eleman sayısının bir eksiğine kadar gider.
+        // Eğer istersek elemalarda kullandığımız indeksleri farklı şekillerde
+        // tanımlayabiliriz.
+        // 1. Sayısal olan ama ardışık artmayan
+        var a = new Array();
+        a[101] = "Alper Konuralp";
+        a[102] = "Ali Konuralp";
+        a[201] = "Kemal Sunal";
+        a[202] = "Adile Naşit";
+
+        // 2. Metin türünde indeksler kullanabiliriz.
+        var b = new Array();
+        b["Doğu"] = "Kadir İnanır";
+        b["Batı"] = "Kemal Sunal";
+        b["Kuzey"] = "Şener Şen";
+        b["Güney"] = "Yılmaz Güney";
+
+        // bu şekilde tanımlanmış dizilerde length özelliği
+        // eleman sayısını doğru olarak gösteremez. ayrıca 
+        // indeks numaraları sayısal olanlarda ardışık artmadığı,
+        // metin şeklinde olanlarda da sayısal olmadığı için for 
+        // döngüsü kullanılamaz. o yüzden
+        // elemanlar üzerinde bir döngü yapmak gerekirse
+        // For in döngüsünü kullanmak gerekir.
+
+        for (var i in a) {
+            document.write(i + " => " + a[i]+ "<br/>");
+        }
+
+        for (var i in b) {
+            document.write(i + " => " + b[i] + "<br/>");
+        }
+        
+    </script>
+
+</body>
+</html>

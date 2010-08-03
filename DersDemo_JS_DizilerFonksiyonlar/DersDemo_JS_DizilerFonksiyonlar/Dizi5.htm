@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dizi içinde dizi</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // birden fazla stok bilgisini tutmak için iç içe diziler
+        // kullanacağız.
+
+        var ss = parseInt(prompt("Stok Sayısı : ", "4"));
+
+        var stoklar = new Array();
+
+        for (var i = 0; i < ss; i++) {
+            var stok = new Array();
+
+            // sırayla bilgileri giriyoruz.
+            stok["StokKodu"] = prompt((i + 1) + ". Stok Kodunu giriniz:", "");
+            stok["StokAdı"] = prompt((i + 1) + ". Stok Adını giriniz:", "");
+            stok["BirimFiyatı"] = parseFloat(prompt((i + 1) + ". Birim Fiyatını giriniz:", ""));
+
+            stoklar[stoklar.length] = stok;
+        }
+
+        document.write("<table border=1>");
+        document.write("<tr><th>Stok Kodu</th><th>Stok Adı</th><th>Birim Fiyatı</th></tr>");
+        for (var i in stoklar) { // dizinin içi dolu olduğu için bu for yöntemini de kullanabiliriz. İstersek diğerinide kullanabiliriz.
+            document.write("<tr><td>" + stoklar[i]["StokKodu"] +
+                "</td><td>" + stoklar[i]["StokAdı"] + "</td><td>" +
+                stoklar[i]["BirimFiyatı"] + "</td></tr>");
+        }
+        document.write("</table>");
+
+    </script>
+
+</body>
+</html>
