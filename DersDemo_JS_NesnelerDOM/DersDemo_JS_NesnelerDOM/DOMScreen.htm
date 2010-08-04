@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SCREEN nesnesi</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        //screen ekran ile ilgili bilgileri alabileceğimiz
+        // bir nesnedir.
+        document.write("Ekran genişliği : " + screen.width);
+        document.write("<br/>Ekran yükseliği : " + screen.height);
+        document.write("<br/>Renk derinliği : " + screen.colorDepth);
+        document.write("<br/>Pixel derinliği : " + screen.pixelDepth);
+        document.write("<br/>Kullanılabilir Alan genişliği: " + screen.availWidth);
+        document.write("<br/>Kullanılabilir Alan yüksekliği: " + screen.availHeight);
+
+        // pencereyi tam ekran yapma
+        window.moveTo(0, 0);
+        window.resizeTo(screen.availWidth , screen.availHeight);
+    </script>
+
+</body>
+</html>

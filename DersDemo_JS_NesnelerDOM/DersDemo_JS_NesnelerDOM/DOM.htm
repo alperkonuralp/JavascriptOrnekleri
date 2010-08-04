@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM : Document Object Model</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Bizim html sayfasındaki elemanlara ulaşmamızı sağlar.
+        // sayfa içersindeki bir div elemanına ulaşıp,
+        // bu elemanın style özelliğini değiştirebilirim.
+
+        // dom'un çatısında window nesnesi bulunur.
+        // bu window'un en üst nesnelerden biri olduğu anlamına gelir.
+        // window pencere ile ilgili bilgilere ve pencere içindeki
+        // html sayfasına ulaşabileceğimiz bir nesnedir.
+
+        // pencereyi taşımak için moveTo fonksiyonu kullanılabilir.
+        window.moveTo(100, 100);
+        // pencereyi tekrardan boyutlandırmak için resizeTo fonksiyonu 
+        // kullanılabilir.
+        window.resizeTo(600, 300);
+
+        // eğer pencere üzerindeki durum bölmesinde (status area) bir
+        // yazı çıkmasını istiyorsanız, window.status ile bu yazıyı 
+        // belirtebilirsiniz.
+
+        window.status = "Merhaba Dünya";
+
+        // Eğer belli bir süre sonra yapılmasını istediğiniz
+        // bir iş var ise ozaman setTimeout fonksiyonundan
+        // faydalabiliriz.
+        window.setTimeout("alert('Merhaba Dünya');", 5000);
+
+        // ÖR: herhangi bir yazıyı status'e harf harf gelmesini
+        // sağlayan bir örnek yapalım.
+        //        window.setTimeout("window.status = 'M';", 500);
+        //        window.setTimeout("window.status = 'Me';", 1000);
+        //        window.setTimeout("window.status = 'Mer';", 1500);
+
+        window.yazi = 'Merhaba Dünya, ben bir javascript koduyum';
+        window.yaziYeri = 1;
+
+        window.yaziYaz = function() {
+            window.status = window.yazi.substr(0, window.yaziYeri++);
+            if (window.yaziYeri <= window.yazi.length)
+                window.setTimeout("window.yaziYaz()", 500);
+        };
+
+        window.yaziYaz();
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM: Olaylar</title>
+</head>
+<body>
+    <div id="dKlavye" style="min-height: 40px; border: 1px solid #444444;" onkeydown="dKlavye_keyDown(event)">
+    </div>
+
+    <script type="text/javascript">
+        // Olay (Event) : herhangi bir eleman üzerinde oluşan
+        // bir değişikliğe denir.
+
+        // Kategori :
+        // 1. Klavye olayları
+        // 2. Mouse olayları
+        // 3. Pencere olayları
+        // 4. Form elemanı olayları
+
+        // 1. Klavye Olayları
+        var elm = document.getElementById("dKlavye");
+        //        elm.onkeypress = function(evt) {
+        //            alert(window.event);
+        //        };
+        function dKlavye_keyPress(evt) {
+            document.getElementById("dKlavye").innerHTML += String.fromCharCode(evt.keyCode);
+        }
+        function dKlavye_keyDown(evt) {
+            if (evt.keyCode > 31)
+                document.getElementById("dKlavye").innerHTML += String.fromCharCode(evt.keyCode);
+            if (evt.keyCode == 8) {
+                var elm = document.getElementById("dKlavye");
+                var ih = elm.innerHTML;
+                ih = ih.substr(0, ih.length - 1);
+                elm.innerHTML = ih;
+            }
+        }
+    </script>
+
+</body>
+</html>

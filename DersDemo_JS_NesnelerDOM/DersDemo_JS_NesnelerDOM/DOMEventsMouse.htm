@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM: Mouse Olayları</title>
+
+    <script type="text/javascript">
+        function dArea_mouseMove(evt) {
+            var dArea = document.getElementById("dArea");
+            dArea.innerHTML =
+                "X : " + evt.clientX +
+                "px, Y : " +
+                evt.clientY + "px";
+        }
+        function dArea_mouseDown(evt) {
+            var dArea = document.getElementById("dArea");
+            dArea.innerHTML =
+                "X : " + evt.clientX +
+                "px, Y : " +
+                evt.clientY + "px, Down Button : " +
+                evt.button;
+        }
+
+        function dArea_mouseUp(evt) {
+            var dArea = document.getElementById("dArea");
+            dArea.innerHTML =
+                "X : " + evt.clientX +
+                "px, Y : " +
+                evt.clientY + "px, Up Button : " +
+                evt.button;
+        }
+
+        function dArea2_click() {
+            var elm = document.getElementById("dArea2");
+            if (elm.style.background == 'blue') {
+                elm.style.background = '';
+            }
+            else {
+                elm.style.background = 'blue';
+            }
+        }
+        function dArea2_doubleClick() {
+            var elm = document.getElementById("dArea2");
+            if (elm.style.background == 'orange') {
+                elm.style.background = '';
+            }
+            else {
+                elm.style.background = 'orange';
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div id="dArea" style="height: 200px; border: 1px solid #444444;" onmouseover="this.style.background = 'blue'"
+        onmouseout="this.style.background = ''" onmousemove="dArea_mouseMove(event);"
+        onmousedown=" dArea_mouseDown(event);" onmouseup=" dArea_mouseUp(event);">
+    </div>
+    <div id="dArea2" style="height: 200px; border: 1px solid #444444;" 
+    onclick="dArea2_click();" ondblclick="dArea2_doubleClick();"
+    
+    >
+    </div>
+</body>
+</html>

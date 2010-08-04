@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nesne Tanımlama Yöntemi 1</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        var stok = new Object();
+        stok.StokKodu = 'a01';
+        stok.StokAdi = 'Kalem';
+        stok.BirimFiyati = 0.75;
+        stok.Adet = 1500;
+        stok.KDVOrani = 18;
+
+        stok.Toplam = function() {
+            return this.BirimFiyati * this.Adet;
+        };
+
+        stok.KDVsizFiyat = function() {
+            return this.BirimFiyati / (100 + this.KDVOrani) * 100.0;
+        }
+
+        stok.KDVHesapla = function() {
+            return this.KDVsizFiyat() * this.KDVOrani / 100;
+        }
+
+        stok.AmbarStokAdetleri = new Array();
+        // stok.AmbarStokAdetleri[0] = 100;
+        // stok.AmbarStokAdetleri[1] = 250;
+        // stok.AmbarStokAdetleri[2] = 950;
+        // stok.AmbarStokAdetleri[3] = 200;
+        stok.AmbarStokAdetleri.push(100);
+        stok.AmbarStokAdetleri.push(250);
+        stok.AmbarStokAdetleri.push(950);
+        stok.AmbarStokAdetleri.push(200);
+
+        stok.AmbarToplami = function() {
+            var toplam = 0;
+            for (var i in this.AmbarStokAdetleri) {
+                toplam += this.AmbarStokAdetleri[i];
+            }
+            return toplam;
+        }
+
+        stok.AmbarBilgisiGir = function(ambarNo, adet) {
+            this.AmbarStokAdetleri[ambarNo] = adet;
+        }
+        stok.AmbarBilgisiAl = function(ambarNo) {
+            return this.AmbarStokAdetleri[ambarNo];
+        }
+
+        stok.AmbarBilgisiGir(1, 245);
+        stok.AmbarBilgisiGir(2, 955);
+
+        document.write(stok.AmbarStokAdetleri);
+        document.write("<br/>");
+        document.write(stok.AmbarToplami());
+
+        // Nesneyi Klonlamak:
+        var stok2 = new Object();
+        // 1. Yöntem elle bütün elemanları yeni nesneye 
+        // kopyalayabiliriz.
+        //stok2.StokKodu = stok.StokKodu;
+        //stok2.StokAdi = stok.StokAdi;
+        // .....
+
+        // 2. Yöntem : for in kullanarak bu işi yapmak
+        for (var i in stok) {
+            stok2[i] = stok[i];
+        }
+        // bu işlem bittiğinde stok ve stok2 hafızada aynı 
+        // bilgileri içeren 2 nesne olarak yer alırlar.
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM: Form Elemens Events</title>
+</head>
+<body>
+    <input type="text" id="tb1" onchange="alert('tb1 değişti.'); return false;" />
+    <br />
+    <textarea id="tb2" cols="40" onchange="alert('tb2 değişti.'); return false;"></textarea>
+    <br />
+    <select id="s1" onchange="alert('s1 = ' + this.selectedIndex + ', value = ' + this.options[this.selectedIndex].text)">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <input type="text" onfocus="/*alert('focus çalıştı');*/"
+    onclick="alert('click çalıştı');"
+    onblur="/*alert('blur çalıştı');*/ if(this.value=='') {this.style.background='pink'; this.focus();} else{this.style.background='';}" />
+</body>
+</html>

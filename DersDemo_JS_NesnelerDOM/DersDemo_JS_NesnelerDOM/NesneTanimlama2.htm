@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Nesne Tanımlamak için 2. Yöntem (Taslak Oluşturma)</title>
+</head>
+<body>
+<script type="text/javascript">
+    // aynı özellikleri içerecek birden fazla nesne 
+    // yaratılacak ise kullanılabilecek yöntem.
+    // fonksiyon tanımı yaparak bunu nesneye çeviririz.
+    // fonksiyonumuz nesnelerin yaratılmasında bir taslak görevi
+    // görür.
+    function StokTaslagi(stokKodu, stokAdi, birimFiyat, 
+                            adet, kdvOrani) {
+        this.StokKodu = stokKodu;
+        this.StokAdi = stokAdi;
+        this.BirimFiyati = birimFiyat;
+        this.Adet = adet;
+        this.KDVOrani = kdvOrani;
+
+        this.AmbarStokAdetleri = new Array();
+
+        this.Toplam = function() {
+            return this.BirimFiyati * this.Adet;
+        };
+
+        this.KDVsizFiyat = function() {
+            return this.BirimFiyati / (100 + this.KDVOrani) * 100.0;
+        }
+
+        this.KDVHesapla = function() {
+            return this.KDVsizFiyat() * this.KDVOrani / 100;
+        }
+
+        this.AmbarToplami = function() {
+            var toplam = 0;
+            for (var i in this.AmbarStokAdetleri) {
+                toplam += this.AmbarStokAdetleri[i];
+            }
+            return toplam;
+        }
+
+        this.AmbarBilgisiGir = function(ambarNo, adet) {
+            this.AmbarStokAdetleri[ambarNo] = adet;
+        }
+        this.AmbarBilgisiAl = function(ambarNo) {
+            return this.AmbarStokAdetleri[ambarNo];
+        }
+    }
+
+
+    var stok = new StokTaslagi('a01', 'Kalem', 0.75, 1500, 18);
+    stok.AmbarBilgisiGir(0, 100);
+    stok.AmbarBilgisiGir(1, 250);
+    stok.AmbarBilgisiGir(2, 950);
+    stok.AmbarBilgisiGir(3, 200);
+
+    document.write(stok.StokAdi);
+    
+    var stok2 = new StokTaslagi('a01', 'Kalem', 0.75, 1500, 18);
+
+</script>
+</body>
+</html>

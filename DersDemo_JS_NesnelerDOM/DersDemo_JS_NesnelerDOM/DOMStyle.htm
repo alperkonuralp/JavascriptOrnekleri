@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM: Style Nesnesi</title>
+</head>
+<body>
+    Merhaba Dünya!...
+    <div id="dMessage">
+        Dünyadan Mars'a</div>
+
+    <script type="text/javascript">
+        // Style nesnesi html elemanları üzerinde inline
+        // css yazabilmek için kullanılacak javascript elemanıdır.
+        document.body.style.background = 'blue';
+        document.body.style.color = 'white';
+
+        var elm = document.getElementById("dMessage");
+        elm.style.fontFamily = "tahoma, verdana";
+        elm.style.fontSize = '12pt';
+
+        // style içindeki elemanların kullanımı :
+        // Css içindeki tanımlamaya çok benzer.
+        // CSS              | JS
+        // -------------------------------------
+        // font             | font
+        // bacground        | background
+        // font-size        | fontSize
+        // background-image | backgroundImage
+        // border-top       | borderTop
+        // border-top-style | borderTopStyle
+
+        // css tanımlamasında arada - işareti kullanılan
+        // elemanlarda - işareti kaldırılır, - işaretinden
+        // sonraki ilk eleman büyük harfle yazılır.
+
+
+        // Örnek :
+        elm.onmouseover = function() {
+            this.style.color = 'yellow';
+            this.style.textDecoration = 'underline overline';
+        };
+
+        elm.onmouseout = function() {
+            this.style.color = 'white';
+            this.style.textDecoration = '';
+        };
+        // bu örnekteki işlem css'le çok daha rahat şekilde
+        // yapılabilir. ve bunu öneririz. burada amaç sadece 
+        // style kullanımını anlatmak idi.
+        
+    </script>
+
+</body>
+</html>

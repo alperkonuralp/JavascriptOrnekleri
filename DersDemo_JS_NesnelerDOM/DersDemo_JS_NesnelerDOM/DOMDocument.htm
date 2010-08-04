@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Document Nesnesi</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // Document nesnesi sayfa ile ilgili genel işlemleri
+        // yapmamızı, yeni nesneler üretmemizi sağlayan bir
+        // nesnedir.
+
+        // document.title sayfa başlığını değiştirmemizi sağlar.
+        document.title = "DOM Document Nesnesi ile ilgili bilgiler";
+
+        window.yazi = "DOM Document Nesnesi ile ilgili bilgiler";
+        window.yaziYeri = 1;
+
+        window.yaziYaz = function() {
+            document.title = window.yazi.substr(0, window.yaziYeri++);
+            if (window.yaziYeri <= window.yazi.length)
+                window.setTimeout("window.yaziYaz()", 500);
+        };
+
+        window.yaziYaz();
+
+        // document.body body tagına erişmemizi sağlar
+        document.body.style.background = '#eeeeee';
+
+        // document.URL sayfanın adresini verir: window.location.href ile aynı anlamdadır.
+        document.write(document.URL);
+
+
+
+        // Fonksiyonları :
+        // write ve writeln : bu fonksiyonlar HTML üzerine
+        // birşeyler yazmak için kullanılır.
+
+        // create ile başlayan fonksiyonlar :
+        // createAttribute : dinamik attribute oluşturmak için kullanılır.
+        // createElement : dinamik element(tag) oluşturmak için kullanılır.
+
+        var a = document.createElement("a");
+        // direk yazma yöntemi
+        //a.href = "http://www.google.com";
+        //a.innerHTML = "Google";
+
+        var href = document.createAttribute("href");
+        href.value = "http://www.google.com";
+        a.attributes.setNamedItem(href);
+
+        var yazii = document.createTextNode("Google");
+        a.appendChild(yazii);
+
+        // appendChild ile bu elemanı sayfaya eklemem gerekir ki ,
+        // sayfa içerisinde görülebilsin.
+        document.body.appendChild(a);
+
+
+        // döngü ile bir şeyleri sayfaya eklemek
+        for (var i = 0; i < 10; i++) {
+            var b = document.createElement("div");
+            b.innerHTML = i;
+            b.style.fontSize = (32 - i * 2) + "px";
+            document.body.appendChild(b);
+        }
+        
+        
+    </script>
+
+    <div id="images">
+        <img src="a01.jpg" />
+        <img src="a04.png" />
+        <img src="a02.jpg" />
+        <img src="a03.png" /></div>
+
+    <script type="text/javascript">
+        // images ulaşılım
+        var a = document.getElementById("images");
+
+        // images altındaki elemanlara childNodes ile ulaşabilirim.
+        for (var i in a.childNodes) {
+            if (a.childNodes[i].tagName && a.childNodes[i].tagName == 'IMG')
+                document.write(a.childNodes[i].src + "<br/>");
+        }
+    </script>
+
+</body>
+</html>

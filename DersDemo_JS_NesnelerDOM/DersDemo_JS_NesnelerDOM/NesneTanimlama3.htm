@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Nesne Tanımlamak için 3. Yöntem (JSON ile)</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+        // JSON : JavaScript Object Notation
+        // json javascript'te dizi ve nesnelerin tanımlanması
+        // için yeni bir standart getirdi. Bu şekilde çok
+        // kısa ve anlaşılabilir şekillerde bu elemanları
+        // tanımlayabiliyoruz.
+        // [] : bir dizi
+        // {} : bir nesne
+        var stok = {
+            StokNo: 'a01',
+            StokAdi: 'Kalem',
+            BirimFiyati: 0.75,
+            Adet: 1500,
+            KDVOrani: 18,
+            AmbarStokAdetleri: [],
+            Toplam: function() { return this.BirimFiyati * this.Adet; },
+            KDVsizFiyat: function() { return this.BirimFiyati / (100 + this.KDVOrani) * 100.0; },
+            KDVHesapla: function() { return this.KDVsizFiyat() * this.KDVOrani / 100; }
+        };
+
+        document.write(stok.KDVHesapla());
+
+        // Stok tanımını XML yapmış olsaydık:
+        
+        // <Stok>
+        // <StokKodu>a01</StokKodu>
+        // <StokAdi>Kalem</StokAdi>
+        // <BirimFiyati>0.75</BirimFiyati>
+        // <Adet>1500</Adet>
+        // <KDVOrani>18</KDVOrani>
+        // </Stok>
+        
+        // bunun yerine json kullanımı veri büyüklüğü
+        // açısından çok daha iyi sonuçlar verebiliyor.
+        
+    </script>
+
+</body>
+</html>

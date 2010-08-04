@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM: Form Elemanları</title>
+
+    <script type="text/javascript">
+        function cclick() {
+            var s = '';
+            // 1. yol : name'ler üzerinden ulaşım.
+            //s += 'tbUserName : ' + document.forms.f1.tbUserName.value;
+            //s += '<br/>tbPassword : ' + document.forms.f1.tbPassword.value;
+
+            // 2. yol id'ler üzerinden elemanlara ulaşım
+            var tbUserName = document.getElementById("tbUserName");
+            var tbPassword = document.getElementById("tbPassword");
+            s += 'tbUserName : ' + tbUserName.value;
+            s += '<br/>tbPassword : ' + tbPassword.value;
+            
+            document.getElementById("dMessage").innerHTML = s;
+        }
+    </script>
+
+</head>
+<body>
+    <form id="f1" name="f1" action="#" method="get">
+    <table>
+        <tr>
+            <th colspan="3">
+                Kullanıcı Girişi
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Kullanıcı Adı
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input type="text" name="tbUserName" id="tbUserName" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Şifre
+            </td>
+            <td>
+                :
+            </td>
+            <td>
+                <input type="password" name="tbPassword" id="tbPassword" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" align="center">
+                <input type="submit" value="Giriş Yap" name="bSend" id="bSend" />
+                <input type="button" value="Değerleri göster" name="bInfo" id="bInfo" onclick="cclick();" />
+            </td>
+        </tr>
+    </table>
+    <div id="dMessage">
+    </div>
+    </form>
+</body>
+</html>
